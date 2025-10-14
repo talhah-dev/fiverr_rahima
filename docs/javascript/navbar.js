@@ -12,7 +12,7 @@ if (mount) {
       <!-- Desktop nav -->
       <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
         <a href="/index.html" class="navlink transition-all duration-400 text-zinc-800 hover:text-indigo-600 transition">Home</a>
-        <a href="/about.html" class="navlink transition-all duration-400 text-zinc-800 hover:text-indigo-600 transition">About</a>
+       <!-- <a href="/about.html" class="navlink transition-all duration-400 text-zinc-800 hover:text-indigo-600 transition">About</a> -->
         <a href="/experience.html" class="navlink transition-all duration-400 text-zinc-800 hover:text-indigo-600 transition">Experience</a>
         <a href="/projects.html" class="navlink transition-all duration-400 text-zinc-800 hover:text-indigo-600 transition">Projects</a>
 
@@ -59,7 +59,7 @@ if (mount) {
 
     <nav class="mt-6 space-y-2" aria-label="Mobile">
       <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/index.html"><i class="fa-solid fa-house mr-2"></i>Home</a>
-      <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/about.html"><i class="fa-regular fa-user mr-2"></i>About</a>
+    <!--  <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/about.html"><i class="fa-regular fa-user mr-2"></i>About</a> -->
       <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/experience.html"><i class="fa-solid fa-timeline mr-2"></i>Experience</a>
       <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/projects.html"><i class="fa-regular fa-folder-open mr-2"></i>Projects</a>
 
