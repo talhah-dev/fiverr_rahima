@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO SERVICES</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- seo -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#fbb03b]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+
+    <section id="contact-hero" class="relative isolate bg-black text-zinc-100">
+        <div id="navbar"></div>
+        <div class="absolute inset-0 -z-10">
+            <div class="h-full w-full bg-center bg-cover"
+                style="background-image:url('/docs/assets/images/about.jpeg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90"></div>
+        </div>
+
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div data-aos="fade-up">
+                    <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Contact</p>
+                    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-semibold">Let’s talk about your recording</h1>
+                    <p class="mt-5 text-zinc-300 max-w-xl">Share your date, location, and service type. We’ll confirm
+                        availability and next steps by email—no online payment needed.</p>
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="mailto:hello@example.com"
+                            class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">
+                            Email Us
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="/book.html"
+                            class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">
+                            Book a Request
+                        </a>
+                    </div>
+                    <div class="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-400">
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt"></i> Typically replies
+                            within 1–2 business days</span>
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Metro area
+                            + regional travel</span>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-widest text-zinc-400">Email</p>
+                                <a href="mailto:hello@example.com"
+                                    class="mt-1 block text-zinc-100 hover:opacity-80 transition">hello@example.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-widest text-zinc-400">Phone</p>
+                                <a href="tel:+00000000000"
+                                    class="mt-1 block text-zinc-100 hover:opacity-80 transition">+00 000 000 000</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-widest text-zinc-400">Hours</p>
+                                <p class="mt-1 text-zinc-100">Mon–Fri, 10:00–18:00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-widest text-zinc-400">Coverage</p>
+                                <p class="mt-1 text-zinc-100">Local metro + regional travel; multi-day quotes available
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+                            <a href="/contact.html#form"
+                                class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition">
+                                Send a Message
+                            </a>
+                            <a href="/book.html"
+                                class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-5 py-2.5 text-sm tracking-wide hover:opacity-80 transition">
+                                Request a Booking
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="form" class="bg-black text-zinc-100">
+  <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+        <div class="absolute -top-16 -right-10 h-40 w-40 rounded-full blur-3xl opacity-20" style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+        <div class="absolute -bottom-16 -left-10 h-56 w-56 rounded-full blur-3xl opacity-20" style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+
+        <div class="max-w-2xl" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl font-semibold">Send a message</h2>
+          <p class="mt-2 text-zinc-300">Tell us about your date, location, and service needs. We’ll reply within 1–2 business days.</p>
+        </div>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5" data-aos="fade-up" data-aos-delay="100">
+          <input type="hidden" name="access_key" value="e12176ee-96dc-4b65-a8d5-eb036298ba77">
+          <input type="hidden" name="from_name" value="Website Contact">
+          <input type="hidden" name="subject" value="New Contact Message">
+          <input type="checkbox" id="botcheck" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+          <input type="text" id="website" name="website" class="hidden" tabindex="-1" autocomplete="off">
+
+          <div class="col-span-1">
+            <label for="full_name" class="block text-sm text-zinc-300 mb-2">Full Name<span class="text-zinc-400"> *</span></label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-user"></i></span>
+              <input id="full_name" name="full_name" type="text" required minlength="2" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="Your name">
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <label for="email" class="block text-sm text-zinc-300 mb-2">Email<span class="text-zinc-400"> *</span></label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-envelope"></i></span>
+              <input id="email" name="email" type="email" required class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <label for="phone" class="block text-sm text-zinc-300 mb-2">Phone</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-phone"></i></span>
+              <input id="phone" name="phone" type="tel" inputmode="tel" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="+00 000 000 000">
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <label for="organisation" class="block text-sm text-zinc-300 mb-2">Organisation</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-building"></i></span>
+              <input id="organisation" name="organisation" type="text" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="Company or group">
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <label for="inquiry_type" class="block text-sm text-zinc-300 mb-2">Inquiry Type<span class="text-zinc-400"> *</span></label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-list"></i></span>
+              <select id="inquiry_type" name="inquiry_type" required class="w-full appearance-none rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-10 py-3 text-zinc-100">
+                <option value="" disabled selected>Select an option</option>
+                <option>General</option>
+                <option>Booking Question</option>
+                <option>Technical</option>
+                <option>Partnership</option>
+                <option>Other</option>
+              </select>
+              <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <label for="preferred_date" class="block text-sm text-zinc-300 mb-2">Preferred Date</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-calendar-day"></i></span>
+              <input id="preferred_date" name="preferred_date" type="date" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100">
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="location" class="block text-sm text-zinc-300 mb-2">Location</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-3 text-zinc-400"><i class="fa-solid fa-location-dot"></i></span>
+              <input id="location" name="location" type="text" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="Venue name, address, city">
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="subject" class="block text-sm text-zinc-300 mb-2">Subject</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i class="fa-solid fa-pen"></i></span>
+              <input id="subject" name="subject" type="text" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500" placeholder="How can we help?">
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="message" class="block text-sm text-zinc-300 mb-2">Message<span class="text-zinc-400"> *</span></label>
+            <div class="relative">
+              <textarea id="message" name="message" required minlength="10" rows="6" class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none px-4 py-3 text-zinc-100 placeholder:text-zinc-500 resize-y" placeholder="Share key details: schedule, tech needs, deliverables"></textarea>
+              <div class="absolute bottom-2 right-3 text-xs text-zinc-500"><span id="charCount">0</span>/1000</div>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 flex items-start gap-3">
+            <input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-white/20 bg-black/40 text-black focus:ring-0 focus:outline-none">
+            <label for="consent" class="text-sm text-zinc-300">I agree to be contacted about my inquiry and understand this form is a request only. No online payment is taken.</label>
+          </div>
+
+          <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+            <button id="submitBtn" type="submit" class="inline-flex items-center justify-center rounded-xl border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm font-medium tracking-wide hover:opacity-80 transition">
+              <span id="btnText">Send Message</span>
+              <svg id="btnSpinner" class="ml-3 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24" fill="none">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+              </svg>
+            </button>
+            <p class="text-sm text-zinc-400">Prefer email? <a href="mailto:hello@example.com" class="underline hover:opacity-80">hello@example.com</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="formPopup" class="fixed inset-0 z-[60] hidden bg-black/70 backdrop-blur">
+  <div class="absolute left-1/2 top-1/2 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-white/10 bg-zinc-900 p-6 text-zinc-100">
+    <div id="popupSending" class="flex flex-col items-center text-center gap-3">
+      <svg class="h-8 w-8 animate-spin" viewBox="0 0 24 24" fill="none"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+      <p class="text-lg font-medium">Sending your message…</p>
+      <p class="text-sm text-zinc-400">Please wait a moment.</p>
+    </div>
+    <div id="popupSuccess" class="hidden flex flex-col items-center text-center gap-3">
+      <i class="fa-solid fa-circle-check text-3xl text-emerald-400"></i>
+      <p class="text-lg font-medium">Thanks! Your message was sent.</p>
+      <button type="button" class="popupClose inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm hover:bg-white/5 transition">Close</button>
+    </div>
+    <div id="popupError" class="hidden flex flex-col items-center text-center gap-3">
+      <i class="fa-solid fa-circle-exclamation text-3xl text-red-400"></i>
+      <p class="text-lg font-medium">Something went wrong.</p>
+      <p class="text-sm text-zinc-400">Please try again or email us directly.</p>
+      <button type="button" class="popupClose inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm hover:bg-white/5 transition">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const btnSpinner = document.getElementById('btnSpinner');
+  const messageEl = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+
+  const popup = document.getElementById('formPopup');
+  const popupSending = document.getElementById('popupSending');
+  const popupSuccess = document.getElementById('popupSuccess');
+  const popupError = document.getElementById('popupError');
+  document.querySelectorAll('.popupClose').forEach(b => b.addEventListener('click', () => popup.classList.add('hidden')));
+
+  function setLoading(state) {
+    if (state) {
+      submitBtn.setAttribute('disabled', 'true');
+      submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+      btnSpinner.classList.remove('hidden');
+      btnText.textContent = 'Sending...';
+    } else {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+      btnSpinner.classList.add('hidden');
+      btnText.textContent = 'Send Message';
+    }
+  }
+
+  function showPopupState(state) {
+    popup.classList.remove('hidden');
+    popupSending.classList.toggle('hidden', state !== 'sending');
+    popupSuccess.classList.toggle('hidden', state !== 'success');
+    popupError.classList.toggle('hidden', state !== 'error');
+  }
+
+  function markValidity(input, ok) {
+    if (ok) {
+      input.classList.remove('border-red-500/40');
+      input.setAttribute('aria-invalid', 'false');
+    } else {
+      input.classList.add('border-red-500/40');
+      input.setAttribute('aria-invalid', 'true');
+    }
+  }
+
+  messageEl.addEventListener('input', () => {
+    const len = Math.min(1000, messageEl.value.length);
+    charCount.textContent = len.toString();
+    if (messageEl.value.length > 1000) messageEl.value = messageEl.value.slice(0, 1000);
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const honeypot1 = document.getElementById('website').value;
+    const honeypot2 = document.getElementById('botcheck').checked;
+    if (honeypot1 || honeypot2) return;
+
+    const requiredFields = ['full_name', 'email', 'inquiry_type', 'message', 'consent'];
+    let valid = true;
+    requiredFields.forEach((id) => {
+      const el = document.getElementById(id);
+      const ok = id === 'consent' ? el.checked : el.checkValidity();
+      markValidity(el, ok);
+      if (!ok) valid = false;
+    });
+    if (!valid) return;
+
+    try {
+      setLoading(true);
+      showPopupState('sending');
+
+      const formData = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        form.reset();
+        charCount.textContent = '0';
+        showPopupState('success');
+        setTimeout(() => popup.classList.add('hidden'), 3000);
+      } else {
+        showPopupState('error');
+      }
+    } catch (err) {
+      showPopupState('error');
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  ['full_name','email','inquiry_type','message'].forEach((id) => {
+    const el = document.getElementById(id);
+    el.addEventListener('input', () => markValidity(el, el.checkValidity()));
+    el.addEventListener('blur', () => markValidity(el, el.checkValidity()));
+  });
+</script>
+
+
+
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+    <script src="./docs/javascript/footer.js"></script>
+</body>
+
+</html>

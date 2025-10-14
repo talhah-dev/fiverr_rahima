@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO SERVICES</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- seo -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#fbb03b]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+    <section id="services-hero" class="relative isolate bg-black text-zinc-100 ">
+        <div id="navbar"></div>
+        <div class="absolute inset-0 -z-10">
+            <div class="h-full w-full bg-center bg-cover"
+                style="background-image:url('/docs/assets/images/about.jpeg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90"></div>
+        </div>
+
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7" data-aos="fade-up">
+                    <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Services</p>
+                    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-semibold">
+                        Audio for theatre & corporate events
+                    </h1>
+                    <p class="mt-5 text-zinc-300 max-w-2xl">
+                        Discreet capture, clear dialogue, flexible deliverables. Choose a category to see tailored
+                        packages and add-ons.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="#services-nav"
+                            class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">Explore
+                            sections</a>
+                        <a href="/book.html"
+                            class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">Request
+                            a booking<i class="fa-solid fa-arrow-right ml-2"></i></a>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-400">
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-microphone"></i> Minimal
+                            stage footprint</span>
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-sliders"></i> Stems & archive
+                            options</span>
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt"></i> Clear
+                            timelines</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7">
+                        <div class="text-sm text-zinc-300">Quick filter</div>
+                        <div class="mt-3 grid grid-cols-2 gap-3">
+                            <button id="srv_theatre"
+                                class="srv-btn inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm hover:bg-white/[0.08] transition"
+                                data-cat="theatre">
+                                <i class="fa-solid fa-masks-theater"></i> Theatre
+                            </button>
+                            <button id="srv_events"
+                                class="srv-btn inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm hover:bg-white/[0.08] transition"
+                                data-cat="events">
+                                <i class="fa-solid fa-people-group"></i> Corporate & Events
+                            </button>
+                        </div>
+
+                        <div class="mt-6 h-px bg-white/10"></div>
+
+                        <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
+                            <a href="#services-grid"
+                                class="inline-flex items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 hover:bg-white/5 transition"><i
+                                    class="fa-solid fa-grid-2"></i><span class="ml-2">Packages</span></a>
+                            <a href="#services-included"
+                                class="inline-flex items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 hover:bg-white/5 transition"><i
+                                    class="fa-solid fa-clipboard-check"></i><span class="ml-2">What’s
+                                    included</span></a>
+                            <a href="#services-addons"
+                                class="inline-flex items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 hover:bg-white/5 transition"><i
+                                    class="fa-solid fa-plus"></i><span class="ml-2">Add-ons</span></a>
+                            <a href="#services-faq"
+                                class="inline-flex items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 hover:bg-white/5 transition"><i
+                                    class="fa-solid fa-circle-question"></i><span class="ml-2">FAQ</span></a>
+                        </div>
+
+                        <button id="srv_go"
+                            class="mt-6 w-full inline-flex items-center justify-center rounded-xl border border-zinc-100 bg-zinc-100 text-black px-5 py-3 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                            <span id="srv_go_txt">Show packages</span>
+                            <svg id="srv_go_spin" class="ml-3 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24"
+                                fill="none">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <p class="mt-3 text-xs text-zinc-400 text-center">No online payment. We’ll confirm details by
+                            email.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="services-nav" class="mt-12 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+                <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> London-based •
+                    regional travel</span>
+                <span class="inline-flex items-center gap-2"><i class="fa-solid fa-wave-square"></i> Clean room feeds
+                    available</span>
+                <span class="inline-flex items-center gap-2"><i class="fa-solid fa-folder-open"></i> WAV/MP3 • stems on
+                    request</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const buttons = document.querySelectorAll('.srv-btn');
+            const go = document.getElementById('srv_go');
+            const goTxt = document.getElementById('srv_go_txt');
+            const goSpin = document.getElementById('srv_go_spin');
+            let selected = null;
+
+            function setSelected(cat) {
+                selected = cat;
+                buttons.forEach(b => {
+                    const on = b.dataset.cat === cat;
+                    b.classList.toggle('ring-1', on);
+                    b.classList.toggle('ring-white/20', on);
+                    b.classList.toggle('bg-white/[0.10]', on);
+                });
+            }
+
+            function setLoading(s) {
+                if (s) {
+                    go.setAttribute('disabled', 'true');
+                    go.classList.add('opacity-80', 'cursor-not-allowed');
+                    goSpin.classList.remove('hidden');
+                    goTxt.textContent = 'Loading…';
+                } else {
+                    go.removeAttribute('disabled');
+                    go.classList.remove('opacity-80', 'cursor-not-allowed');
+                    goSpin.classList.add('hidden');
+                    goTxt.textContent = 'Show packages';
+                }
+            }
+
+            buttons.forEach(b => b.addEventListener('click', () => {
+                setSelected(b.dataset.cat);
+            }));
+
+            go.addEventListener('click', (e) => {
+                e.preventDefault();
+                setLoading(true);
+                const p = new URLSearchParams(location.search);
+                if (selected) p.set('cat', selected); else p.delete('cat');
+                const newUrl = location.pathname + (p.toString() ? '?' + p.toString() : '') + '#services-grid';
+                history.replaceState(null, '', newUrl);
+                const target = document.querySelector('#services-grid') || document.body;
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setLoading(false);
+                }, 500);
+            });
+
+            const init = (new URLSearchParams(location.search).get('cat') || '').toLowerCase();
+            if (init === 'events' || init === 'theatre') setSelected(init);
+        })();
+    </script>
+
+    <section id="services-grid" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Categories</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Choose your category</h2>
+                <p class="mt-3 text-zinc-300">Pick Theatre or Corporate & Events to see tailored packages and add-ons.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <article id="card-theatre"
+                    class="group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition p-6 sm:p-8"
+                    data-aos="fade-up">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-12 w-12 rounded-xl bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-masks-theater text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-zinc-400">Stage</div>
+                                <h3 class="mt-1 text-2xl font-semibold">Theatre Recording</h3>
+                                <p class="mt-2 text-sm text-zinc-300">Plays, devised work, staged readings, filmed
+                                    performances.</p>
+                            </div>
+                        </div>
+                        <span
+                            class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Dialogue</span>
+                    </div>
+
+                    <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Discreet mic plans
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Room ambience
+                            options</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Minimal stage
+                            footprint</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Stems export on
+                            request</li>
+                    </ul>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-3">
+                        <button
+                            class="cat-go inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-5 py-2.5 text-sm font-medium tracking-wide hover:opacity-80 transition"
+                            data-cat="theatre">
+                            See theatre packages <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                        <a href="/book.html?cat=theatre"
+                            class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition">Request
+                            a booking</a>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">WAV/MP3</span>
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">Clean edits</span>
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">Archive options</span>
+                    </div>
+                </article>
+
+                <article id="card-events"
+                    class="group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition p-6 sm:p-8"
+                    data-aos="fade-up" data-aos-delay="50">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="h-12 w-12 rounded-xl bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-people-group text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-zinc-400">Events</div>
+                                <h3 class="mt-1 text-2xl font-semibold">Corporate & Events</h3>
+                                <p class="mt-2 text-sm text-zinc-300">Panels, talks, keynotes, workshops, offsites,
+                                    brand events.</p>
+                            </div>
+                        </div>
+                        <span
+                            class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Multi</span>
+                    </div>
+
+                    <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Consistent levels
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Clean feed for
+                            video</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Rapid setup</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>On-site liaison
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-3">
+                        <button
+                            class="cat-go inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-5 py-2.5 text-sm font-medium tracking-wide hover:opacity-80 transition"
+                            data-cat="events">
+                            See event packages <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                        <a href="/book.html?cat=events"
+                            class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition">Request
+                            a booking</a>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">WAV/MP3</span>
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">Panel-ready mix</span>
+                        <span class="text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-300">Broadcast options</span>
+                    </div>
+                </article>
+            </div>
+
+            <div
+                class="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-5 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
+                <div class="flex-1 text-sm text-zinc-300">Based in London with regional travel. Choose a category to
+                    reveal packages tailored to your use case.</div>
+                <div class="flex gap-3">
+                    <a href="#services-included"
+                        class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition"><i
+                            class="fa-solid fa-clipboard-check mr-2"></i>What’s included</a>
+                    <a href="#services-addons"
+                        class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition"><i
+                            class="fa-solid fa-plus mr-2"></i>Add-ons</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const paramCat = (new URLSearchParams(location.search).get('cat') || '').toLowerCase();
+            const cards = {
+                theatre: document.getElementById('card-theatre'),
+                events: document.getElementById('card-events')
+            };
+
+            function highlight(cat) {
+                Object.entries(cards).forEach(([k, el]) => {
+                    const on = k === cat;
+                    el.classList.toggle('ring-1', on);
+                    el.classList.toggle('ring-white/30', on);
+                    el.classList.toggle('bg-white/[0.04]', on);
+                });
+            }
+            if (paramCat === 'theatre' || paramCat === 'events') highlight(paramCat);
+
+            function setBtnLoading(btn, s) {
+                const icon = btn.querySelector('i.fa-arrow-right');
+                if (s) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.classList.add('opacity-80', 'cursor-not-allowed');
+                    if (icon) { icon.classList.add('hidden'); }
+                    const spin = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    spin.setAttribute('viewBox', '0 0 24 24');
+                    spin.classList.add('ml-2', 'h-4', 'w-4', 'animate-spin');
+                    spin.innerHTML = '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>';
+                    btn.appendChild(spin);
+                    btn._spin = spin;
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (btn._spin) { btn._spin.remove(); btn._spin = null; }
+                    const icon = btn.querySelector('i.fa-arrow-right');
+                    if (icon) { icon.classList.remove('hidden'); }
+                }
+            }
+
+            document.querySelectorAll('.cat-go').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const cat = btn.dataset.cat;
+                    setBtnLoading(btn, true);
+                    const p = new URLSearchParams(location.search);
+                    if (cat) p.set('cat', cat); else p.delete('cat');
+                    const anchor = document.querySelector('#services-packages') ? '#services-packages' : '#services-included';
+                    const newUrl = location.pathname + '?' + p.toString() + anchor;
+                    history.replaceState(null, '', newUrl);
+                    const target = document.querySelector(anchor) || document.body;
+                    setTimeout(() => {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setBtnLoading(btn, false);
+                    }, 450);
+                });
+            });
+        })();
+    </script>
+
+
+    <section id="services-packages" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Packages</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Pick a package tailored to your stage</h2>
+                <p class="mt-3 text-zinc-300">Select Theatre or Corporate & Events to reveal packages. You can adjust
+                    add-ons before sending a booking request.</p>
+            </div>
+
+            <div class="mt-8" data-aos="fade-up" data-aos-delay="50" role="tablist" aria-label="Service packages">
+                <div class="inline-flex rounded-xl border border-white/10 bg-white/[0.02] p-1">
+                    <button id="sp-tab-theatre" role="tab" aria-selected="true" aria-controls="sp-panel-theatre"
+                        class="sp-tab inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-white/10 ring-1 ring-white/10">
+                        <i class="fa-solid fa-masks-theater"></i> Theatre
+                    </button>
+                    <button id="sp-tab-events" role="tab" aria-selected="false" aria-controls="sp-panel-events"
+                        class="sp-tab inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-zinc-300 hover:bg-white/[0.06]">
+                        <i class="fa-solid fa-people-group"></i> Corporate &amp; Events
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <div id="sp-panel-theatre" role="tabpanel" aria-labelledby="sp-tab-theatre">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Essential</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i
+                                        class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Dialogue-first capture</li>
+                                <li class="flex gap-2"><i
+                                        class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Low-footprint setup</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Standard
+                                    delivery</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="theatre" data-pkg="theatre-essential">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=theatre&pkg=theatre-essential#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Popular</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Standard</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Multi-mic
+                                    coverage</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Scene-aware
+                                    balancing</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Clear
+                                    timelines</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="theatre" data-pkg="theatre-standard">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=theatre&pkg=theatre-standard#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Most
+                                    Booked</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Premium</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Expanded
+                                    mic plan</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Optional
+                                    stems export</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Priority
+                                    turnaround</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="theatre" data-pkg="theatre-premium">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=theatre&pkg=theatre-premium#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Custom</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Enterprise</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Complex or
+                                    multi-night</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Bespoke
+                                    deliverables</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>On-site
+                                    coordination</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="theatre" data-pkg="theatre-enterprise">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=theatre&pkg=theatre-enterprise#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="sp-panel-events" role="tabpanel" aria-labelledby="sp-tab-events" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Presentation Capture</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Keynotes /
+                                    talks</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Podium or
+                                    clip mic</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Clean room
+                                    feed</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="events" data-pkg="events-presentation">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=events&pkg=events-presentation#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Best
+                                    Value</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Multi-Speaker / Panel</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Multiple
+                                    mics</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Tech
+                                    liaison</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Consistent
+                                    levels</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="events" data-pkg="events-panel">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=events&pkg=events-panel#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Pro</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Broadcast-Ready Event</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Live mix
+                                    with safety</li>
+                                <li class="flex gap-2"><i
+                                        class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Multichannel options</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>On-site
+                                    coordination</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <button
+                                    class="sp-select inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition"
+                                    data-cat="events" data-pkg="events-broadcast">Select package <i
+                                        class="fa-solid fa-arrow-right ml-2"></i></button>
+                                <a href="/book.html?cat=events&pkg=events-broadcast#booking-form"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Request
+                                    booking</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-5 sm:p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
+                <div class="flex-1 text-sm text-zinc-300">After selecting a package, you can add optional extras and
+                    then submit a request. No online payment is taken.</div>
+                <div class="flex gap-3">
+                    <a href="#services-included"
+                        class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition"><i
+                            class="fa-solid fa-clipboard-check mr-2"></i>What’s included</a>
+                    <a href="#services-addons"
+                        class="inline-flex items-center rounded-sm border border-white/15 px-5 py-2.5 text-sm tracking-wide hover:bg-white/5 transition"><i
+                            class="fa-solid fa-plus mr-2"></i>Add-ons</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const tabTheatre = document.getElementById('sp-tab-theatre');
+            const tabEvents = document.getElementById('sp-tab-events');
+            const panelTheatre = document.getElementById('sp-panel-theatre');
+            const panelEvents = document.getElementById('sp-panel-events');
+
+            function setTab(which) {
+                const isTheatre = which === 'theatre';
+                tabTheatre.setAttribute('aria-selected', isTheatre ? 'true' : 'false');
+                tabEvents.setAttribute('aria-selected', !isTheatre ? 'true' : 'false');
+
+                tabTheatre.classList.toggle('bg-white/10', isTheatre);
+                tabTheatre.classList.toggle('ring-1', isTheatre);
+                tabTheatre.classList.toggle('ring-white/10', isTheatre);
+                tabTheatre.classList.toggle('text-zinc-300', !isTheatre);
+
+                tabEvents.classList.toggle('bg-white/10', !isTheatre);
+                tabEvents.classList.toggle('ring-1', !isTheatre);
+                tabEvents.classList.toggle('ring-white/10', !isTheatre);
+                tabEvents.classList.toggle('text-zinc-300', isTheatre);
+
+                panelTheatre.classList.toggle('hidden', !isTheatre);
+                panelEvents.classList.toggle('hidden', isTheatre);
+            }
+
+            tabTheatre.addEventListener('click', () => setTab('theatre'));
+            tabEvents.addEventListener('click', () => setTab('events'));
+
+            const params = new URLSearchParams(location.search);
+            const catParam = (params.get('cat') || '').toLowerCase();
+            if (catParam === 'events') setTab('events'); else setTab('theatre');
+
+            function setBtnLoading(btn, s) {
+                const icon = btn.querySelector('i.fa-arrow-right');
+                if (s) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.classList.add('opacity-80', 'cursor-not-allowed');
+                    if (icon) { icon.classList.add('hidden'); }
+                    const spin = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    spin.setAttribute('viewBox', '0 0 24 24');
+                    spin.classList.add('ml-2', 'h-4', 'w-4', 'animate-spin');
+                    spin.innerHTML = '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>';
+                    btn.appendChild(spin);
+                    btn._spin = spin;
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (btn._spin) { btn._spin.remove(); btn._spin = null; }
+                    if (icon) { icon.classList.remove('hidden'); }
+                }
+            }
+
+            document.querySelectorAll('.sp-select').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const cat = btn.dataset.cat;
+                    const pkg = btn.dataset.pkg;
+                    setBtnLoading(btn, true);
+                    const p = new URLSearchParams(location.search);
+                    if (cat) p.set('cat', cat);
+                    if (pkg) p.set('pkg', pkg);
+                    const anchor = document.querySelector('#services-addons') ? '#services-addons' : '#services-included';
+                    const newUrl = location.pathname + '?' + p.toString() + anchor;
+                    history.replaceState(null, '', newUrl);
+                    const target = document.querySelector(anchor) || document.body;
+                    setTimeout(() => {
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setBtnLoading(btn, false);
+                    }, 450);
+                });
+            });
+        })();
+    </script>
+
+    <section id="services-included" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">What’s included</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Exactly what you get</h2>
+                <p class="mt-3 text-zinc-300">Clear deliverables across all packages, plus category-specific coverage
+                    tuned to your room and run-of-show.</p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <article
+                    class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                    data-aos="fade-up">
+                    <div class="flex items-center justify-between">
+                        <div class="text-xs uppercase tracking-widest text-zinc-400">All packages</div>
+                        <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Standard</span>
+                    </div>
+                    <h3 class="mt-2 text-xl font-semibold">Core deliverables</h3>
+                    <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Clean
+                            dialogue-first mix (WAV + MP3)</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Light balancing &
+                            noise management</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Room tone capture
+                            (when appropriate)</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Basic naming &
+                            delivery folder structure</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Email handoff with
+                            notes & timestamps</li>
+                    </ul>
+                    <div class="mt-5 grid grid-cols-2 gap-2 text-xs">
+                        <span class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-folder-open"></i> WAV/MP3</span>
+                        <span class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-clock"></i> Clear timelines</span>
+                    </div>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                    data-aos="fade-up" data-aos-delay="50">
+                    <div class="flex items-center justify-between">
+                        <div class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-masks-theater"></i> Theatre</div>
+                        <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Stage-first</span>
+                    </div>
+                    <h3 class="mt-2 text-xl font-semibold">Theatre specifics</h3>
+                    <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Discreet mic plan
+                            respecting stage picture</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Scene-aware level
+                            management for dialogue</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Option to capture
+                            ambience for live feel</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Filmed performance
+                            sync-friendly capture</li>
+                    </ul>
+                    <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                        <a href="/book.html?cat=theatre#booking-form"
+                            class="px-2 py-1 rounded-md bg-zinc-100 text-black inline-flex items-center gap-2"><i
+                                class="fa-solid fa-arrow-right"></i> Book theatre</a>
+                        <a href="/services.html#services-packages"
+                            class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-box-open"></i> View packages</a>
+                    </div>
+                </article>
+
+                <article
+                    class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between">
+                        <div class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-people-group"></i> Corporate & Events</div>
+                        <span class="text-[10px] px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Panels / Talks</span>
+                    </div>
+                    <h3 class="mt-2 text-xl font-semibold">Events specifics</h3>
+                    <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Consistent levels
+                            across multiple speakers</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Podium, clip or
+                            handheld options</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>Clean feed for
+                            video teams when needed</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>On-site liaison
+                            with AV / stage management</li>
+                    </ul>
+                    <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                        <a href="/book.html?cat=events#booking-form"
+                            class="px-2 py-1 rounded-md bg-zinc-100 text-black inline-flex items-center gap-2"><i
+                                class="fa-solid fa-arrow-right"></i> Book events</a>
+                        <a href="/services.html#services-packages"
+                            class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                class="fa-solid fa-box-open"></i> View packages</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7" data-aos="fade-up">
+                    <h4 class="text-lg font-semibold">Turnaround</h4>
+                    <p class="mt-2 text-sm text-zinc-300">Standard delivery within agreed timelines. Priority turnaround
+                        available on Premium or as an add-on.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <h4 class="text-lg font-semibold">Formats</h4>
+                    <p class="mt-2 text-sm text-zinc-300">WAV + MP3 by default. Stems export and long-term archive
+                        available as add-ons.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h4 class="text-lg font-semibold">Good to know</h4>
+                    <ul class="mt-2 space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-2"><i class="fa-solid fa-circle-info mt-0.5 text-zinc-500"></i>No online
+                            payment—confirmation & invoice via email</li>
+                        <li class="flex gap-2"><i
+                                class="fa-solid fa-location-dot mt-0.5 text-zinc-500"></i>London-based, regional travel
+                            available</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-shield-halved mt-0.5 text-zinc-500"></i>Minimal,
+                            stage-respecting footprint</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-wrap items-center gap-3" data-aos="fade-up">
+                <a href="#services-addons"
+                    class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition"><i
+                        class="fa-solid fa-plus mr-2"></i>Add-ons</a>
+                <a href="/book.html"
+                    class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">Request
+                    a booking<i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services-addons" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Add-ons</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Optional extras to refine your capture</h2>
+                <p class="mt-3 text-zinc-300">Pick the extras you need. You’ll confirm everything on the booking page—no
+                    online payment is taken.</p>
+            </div>
+
+            <div class="mt-8 flex items-center gap-3" data-aos="fade-up" data-aos-delay="50">
+                <button
+                    class="srv-addon-filter inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-2 text-sm hover:bg-white/[0.10] transition"
+                    data-cat="">
+                    <i class="fa-solid fa-layer-group"></i> All
+                </button>
+                <button
+                    class="srv-addon-filter inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-2 text-sm hover:bg-white/[0.10] transition"
+                    data-cat="theatre">
+                    <i class="fa-solid fa-masks-theater"></i> Theatre
+                </button>
+                <button
+                    class="srv-addon-filter inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-2 text-sm hover:bg-white/[0.10] transition"
+                    data-cat="events">
+                    <i class="fa-solid fa-people-group"></i> Corporate & Events
+                </button>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events" data-key="extra-lav" data-price="40" data-aos="fade-up">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Extra Lavalier Mic</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Add a discreet clip mic for an additional
+                                        performer or host.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$40</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events" data-key="ambience-mic" data-price="30" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-wave-square"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Room Ambience Mic</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Capture natural audience/room tone for a live
+                                        sound.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$30</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events" data-key="stems-export" data-price="60" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-sliders"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Isolated Stems Export</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Receive separate tracks for flexible
+                                        post-mixing.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$60</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events" data-key="priority-turnaround" data-price="80" data-aos="fade-up">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Priority Turnaround</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Accelerated delivery on eligible packages.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$80</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="events" data-key="tech-liaison" data-price="50" data-aos="fade-up" data-aos-delay="50">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-people-arrows"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Tech Liaison</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Coordination with venue/video teams and stage
+                                        management.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$50</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article
+                    class="srv-addon group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events" data-key="multitrack-archive" data-price="90" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <label class="block cursor-pointer p-6 sm:p-7">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-hard-drive"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Multitrack Archive</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Long-term archive delivery in your preferred
+                                        format.</p>
+                                </div>
+                            </div>
+                            <span class="text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$90</span>
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" class="srv-addon-input hidden">
+                            <span
+                                class="srv-addon-check inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md border border-white/10 bg-white/[0.02]">Select</span>
+                        </div>
+                    </label>
+                </article>
+            </div>
+
+            <div class="mt-8"></div>
+
+            <div
+                class="max-w-5xl mx-auto sticky bottom-4 z-10 rounded-xl border border-white/10 bg-black px-4 py-3 flex items-center gap-4">
+                <div class="flex items-center gap-2 text-sm text-zinc-300">
+                    <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                    <span><span id="srv-addon-count" class="font-semibold">0</span> selected</span>
+                </div>
+                <div class="ml-auto flex items-center gap-3">
+                    <div class="text-sm text-zinc-400">Subtotal</div>
+                    <div id="srv-addon-total" class="text-lg font-semibold">$0</div>
+                    <button id="srv-addon-continue"
+                        class="inline-flex items-center justify-center rounded-lg border border-zinc-100 bg-zinc-100 text-black px-5 py-2.5 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                        <span id="srv-addon-continue-text">Continue to booking</span>
+                        <svg id="srv-addon-continue-spin" class="ml-2 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24"
+                            fill="none">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <p class="mt-4 text-xs text-zinc-400 text-center">We’ll confirm availability and email next steps. No online
+                payment on the site.</p>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(location.search);
+            const catParam = (params.get('cat') || '').toLowerCase();
+            const pkgParam = (params.get('pkg') || '');
+            const filterBtns = document.querySelectorAll('.srv-addon-filter');
+            const cards = Array.from(document.querySelectorAll('.srv-addon'));
+            const totalEl = document.getElementById('srv-addon-total');
+            const countEl = document.getElementById('srv-addon-count');
+            const goBtn = document.getElementById('srv-addon-continue');
+            const goTxt = document.getElementById('srv-addon-continue-text');
+            const goSpin = document.getElementById('srv-addon-continue-spin');
+
+            function money(n) { return '$' + Number(n || 0).toFixed(0); }
+
+            function setFilter(cat) {
+                filterBtns.forEach(b => {
+                    const on = b.dataset.cat === cat;
+                    b.classList.toggle('bg-white/[0.10]', on);
+                    b.classList.toggle('bg-white/[0.06]', !on && b.dataset.cat === '');
+                    b.classList.toggle('bg-white/[0.02]', !on && b.dataset.cat !== '');
+                    b.classList.toggle('ring-1', on);
+                    b.classList.toggle('ring-white/20', on);
+                });
+                cards.forEach(c => {
+                    const cats = (c.dataset.cat || '').toLowerCase().split(',').map(s => s.trim());
+                    const show = !cat || cats.includes(cat);
+                    c.classList.toggle('opacity-30', !show);
+                    c.classList.toggle('pointer-events-none', !show);
+                });
+            }
+
+            function syncFromURL() {
+                setFilter(catParam || '');
+                const selected = (params.get('addons') || '').split(',').map(s => s.trim()).filter(Boolean);
+                cards.forEach(card => {
+                    const input = card.querySelector('.srv-addon-input');
+                    input.checked = selected.includes(card.dataset.key);
+                    applyCardState(card, input.checked);
+                });
+                recalc();
+            }
+
+            function applyCardState(card, checked) {
+                const check = card.querySelector('.srv-addon-check');
+                if (checked) {
+                    card.classList.add('ring-1', 'ring-emerald-400/40');
+                    check.textContent = 'Selected';
+                    check.classList.remove('border-white/10', 'bg-white/[0.02]');
+                    check.classList.add('border-emerald-400/30', 'bg-emerald-400/10', 'text-emerald-200');
+                } else {
+                    card.classList.remove('ring-1', 'ring-emerald-400/40');
+                    check.textContent = 'Select';
+                    check.classList.add('border-white/10', 'bg-white/[0.02]');
+                    check.classList.remove('border-emerald-400/30', 'bg-emerald-400/10', 'text-emerald-200');
+                }
+            }
+
+            function recalc() {
+                let sum = 0, cnt = 0;
+                cards.forEach(card => {
+                    const input = card.querySelector('.srv-addon-input');
+                    if (input.checked) {
+                        cnt++;
+                        sum += Number(card.dataset.price || 0);
+                    }
+                });
+                totalEl.textContent = money(sum);
+                countEl.textContent = String(cnt);
+            }
+
+            cards.forEach(card => {
+                const input = card.querySelector('.srv-addon-input');
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a,button')) return;
+                    input.checked = !input.checked;
+                    applyCardState(card, input.checked);
+                    recalc();
+                });
+            });
+
+            filterBtns.forEach(b => b.addEventListener('click', () => {
+                const cat = b.dataset.cat || '';
+                setFilter(cat);
+            }));
+
+            function setLoading(s) {
+                if (s) {
+                    goBtn.setAttribute('disabled', 'true');
+                    goBtn.classList.add('opacity-80', 'cursor-not-allowed');
+                    goSpin.classList.remove('hidden');
+                    goTxt.textContent = 'Preparing…';
+                } else {
+                    goBtn.removeAttribute('disabled');
+                    goBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    goSpin.classList.add('hidden');
+                    goTxt.textContent = 'Continue to booking';
+                }
+            }
+
+            goBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                setLoading(true);
+                const selectedKeys = cards.filter(c => c.querySelector('.srv-addon-input').checked).map(c => c.dataset.key);
+                const p = new URLSearchParams();
+                const cat = catParam || '';
+                if (cat) p.set('cat', cat);
+                if (pkgParam) p.set('pkg', pkgParam);
+                if (selectedKeys.length) p.set('addons', selectedKeys.join(','));
+                const url = '/book.html?' + p.toString() + '#booking-form';
+                setTimeout(() => { location.href = url; }, 450);
+            });
+
+            syncFromURL();
+        })();
+    </script>
+
+
+    <section id="services-process" class="relative bg-black text-zinc-100 overflow-hidden">
+        <div class="pointer-events-none absolute inset-0 -z-10">
+            <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-10"
+                style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+            <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl opacity-10"
+                style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+        </div>
+
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Process</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">From request to delivery—simple and clear</h2>
+                <p class="mt-3 text-zinc-300">No online payment. You’ll confirm details and receive instructions by
+                    email.</p>
+            </div>
+
+            <div class="relative mt-12">
+                <div
+                    class="hidden lg:block absolute left-1/2 top-14 -translate-x-1/2 h-1 w-full max-w-5xl bg-gradient-to-r from-transparent via-white/10 to-transparent">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                    <article
+                        class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                        data-aos="fade-up">
+                        <div class="flex items-center justify-between">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <span class="text-xs px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Step 1</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold">Choose & add</h3>
+                        <p class="mt-2 text-sm text-zinc-300">Pick a category & package, then add optional extras.</p>
+                        <a href="#services-packages"
+                            class="mt-4 inline-flex items-center text-sm rounded-sm border border-white/15 px-4 py-2 hover:bg-white/5 transition">See
+                            packages</a>
+                    </article>
+
+                    <article
+                        class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                        data-aos="fade-up" data-aos-delay="50">
+                        <div class="flex items-center justify-between">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <span class="text-xs px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Step 2</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold">Request date</h3>
+                        <p class="mt-2 text-sm text-zinc-300">Send date, location, timing, and any notes via the booking
+                            form.</p>
+                        <a href="/book.html#booking-form"
+                            class="mt-4 inline-flex items-center text-sm rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 hover:opacity-80 transition">Go
+                            to booking<i class="fa-solid fa-arrow-right ml-2"></i></a>
+                    </article>
+
+                    <article
+                        class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-between">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+                            <span class="text-xs px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Step 3</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold">Confirm plan</h3>
+                        <p class="mt-2 text-sm text-zinc-300">We confirm availability, share a simple mic plan &
+                            timelines by email.</p>
+                        <a href="#services-included"
+                            class="mt-4 inline-flex items-center text-sm rounded-sm border border-white/15 px-4 py-2 hover:bg-white/5 transition">What’s
+                            included</a>
+                    </article>
+
+                    <article
+                        class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition"
+                        data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex items-center justify-between">
+                            <div
+                                class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                <i class="fa-solid fa-file-waveform"></i>
+                            </div>
+                            <span class="text-xs px-2 py-0.5 rounded-md bg-white/10 text-zinc-300">Step 4</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-semibold">Capture & deliver</h3>
+                        <p class="mt-2 text-sm text-zinc-300">Discreet on-site capture, then clean files delivered in
+                            agreed formats.</p>
+                        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                    class="fa-solid fa-folder-open"></i> WAV/MP3</span>
+                            <span
+                                class="px-2 py-1 rounded-md bg-white/10 text-zinc-300 inline-flex items-center gap-2"><i
+                                    class="fa-solid fa-sliders"></i> Stems optional</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="mt-12 flex flex-wrap items-center gap-3" data-aos="fade-up">
+                <a href="#services-faq"
+                    class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition"><i
+                        class="fa-solid fa-circle-question mr-2"></i>Services FAQ</a>
+                <a href="/book.html"
+                    class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">Request
+                    a booking<i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-faq" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">FAQ</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Services — frequently asked questions</h2>
+                <p class="mt-3 text-zinc-300">Everything you need to know before choosing a package or sending a booking
+                    request.</p>
+            </div>
+
+            <div class="md:mt-12 mt-8 space-y-4">
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-1" onclick="toggleSFAQ(1)" aria-expanded="false"
+                        aria-controls="sfaq-content-1" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">What’s the difference between Theatre and Corporate
+                            & Events packages?</p>
+                        <i id="sfaq-icon-1"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Theatre focuses on dialogue-first capture with a discreet footprint and ambience options for
+                            a live feel. Corporate & Events prioritises consistent levels across multiple speakers,
+                            podium/clip mic options, and a clean feed for video teams.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-2" onclick="toggleSFAQ(2)" aria-expanded="false"
+                        aria-controls="sfaq-content-2" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">Do you take online payments on the site?</p>
+                        <i id="sfaq-icon-2"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            No payment is taken online. Submit a booking request and we’ll confirm availability and
+                            email you the next steps and payment instructions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-3" onclick="toggleSFAQ(3)" aria-expanded="false"
+                        aria-controls="sfaq-content-3" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">What deliverables do I receive?</p>
+                        <i id="sfaq-icon-3"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Clean dialogue-first mixes as WAV and MP3 by default. Optional add-ons include isolated
+                            stems and multitrack archive. We’ll confirm formats that fit your workflow.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-4" onclick="toggleSFAQ(4)" aria-expanded="false"
+                        aria-controls="sfaq-content-4" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">Can I add extras like more mics or faster
+                            turnaround?</p>
+                        <i id="sfaq-icon-4"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Yes. Use the Add-ons section to select extras such as extra lav mics, ambience mic, stems
+                            export, priority turnaround, tech liaison, and long-term archive.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-5" onclick="toggleSFAQ(5)" aria-expanded="false"
+                        aria-controls="sfaq-content-5" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">Do you travel outside your base city?</p>
+                        <i id="sfaq-icon-5"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Yes—London based with regional travel available. Share your venue and dates on the booking
+                            form and we’ll confirm logistics in our email reply.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-6" onclick="toggleSFAQ(6)" aria-expanded="false"
+                        aria-controls="sfaq-content-6" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">What’s the usual turnaround time?</p>
+                        <i id="sfaq-icon-6"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            We agree a clear delivery window in advance. Priority turnaround can be added to Premium or
+                            selected as an add-on when needed.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-7" onclick="toggleSFAQ(7)" aria-expanded="false"
+                        aria-controls="sfaq-content-7" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">Can you sync with filmed performances?</p>
+                        <i id="sfaq-icon-7"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Yes—our theatre capture can be made sync-friendly for camera, and we can provide a clean
+                            room feed or timecode on request.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/[0.02] border border-white/10 rounded-2xl p-6" data-aos="fade-up">
+                    <button id="sfaq-trigger-8" onclick="toggleSFAQ(8)" aria-expanded="false"
+                        aria-controls="sfaq-content-8" class="w-full flex justify-between items-center text-left">
+                        <p class="text-base sm:text-lg font-medium">What if my schedule changes?</p>
+                        <i id="sfaq-icon-8"
+                            class="fa-solid fa-angle-down text-zinc-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="sfaq-content-8" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-300">
+                            Tell us as soon as possible. We’ll do our best to accommodate changes and will confirm any
+                            updated plan and timelines by email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-3" data-aos="fade-up">
+                <a href="/book.html#booking-form"
+                    class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">Request
+                    a booking<i class="fa-solid fa-arrow-right ml-2"></i></a>
+                <a href="/contact.html#form"
+                    class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">Ask
+                    a question</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleSFAQ(i) {
+            const content = document.getElementById(`sfaq-content-${i}`);
+            const trigger = document.getElementById(`sfaq-trigger-${i}`);
+            const icon = document.getElementById(`sfaq-icon-${i}`);
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                trigger.setAttribute('aria-expanded', 'false');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                trigger.setAttribute('aria-expanded', 'true');
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+
+
+    <section id="services-cta" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:p-10">
+                <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full blur-3xl opacity-15"
+                    style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+                <div class="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full blur-3xl opacity-15"
+                    style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="lg:col-span-2" data-aos="fade-up">
+                        <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Ready to get started?</p>
+                        <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Tell us your date, location, and what you
+                            need</h2>
+                        <p class="mt-3 text-zinc-300 max-w-2xl">Choose a package, add optional extras, and send a
+                            request in minutes. We’ll confirm availability and email next steps—no online payment on the
+                            site.</p>
+
+                        <div class="mt-6 flex flex-wrap items-center gap-3">
+                            <a id="srvFinalBtn" href="/book.html#booking-form"
+                                class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                                <span>Request a booking</span>
+                                <svg id="srvFinalSpin" class="ml-3 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                                    <path class="opacity-75" fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                </svg>
+                            </a>
+                            <a href="/contact.html#form"
+                                class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">
+                                Contact us
+                            </a>
+                            <a href="#services-packages"
+                                class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">
+                                View packages
+                            </a>
+                        </div>
+
+                        <p class="mt-3 text-xs text-zinc-400">Prefer email? <a href="mailto:hello@example.com"
+                                class="underline hover:opacity-80">hello@example.com</a></p>
+                    </div>
+
+                    <ul class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+                                <i class="fa-solid fa-microphone"></i>
+                            </span>
+                            <div>
+                                <p class="font-medium">Minimal stage footprint</p>
+                                <p class="text-sm text-zinc-400">Discreet setups that respect the room and audience.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+                                <i class="fa-solid fa-sliders"></i>
+                            </span>
+                            <div>
+                                <p class="font-medium">Flexible deliverables</p>
+                                <p class="text-sm text-zinc-400">WAV/MP3 by default, stems and archive on request.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+                                <i class="fa-solid fa-bolt"></i>
+                            </span>
+                            <div>
+                                <p class="font-medium">Fast, clear replies</p>
+                                <p class="text-sm text-zinc-400">We confirm availability and timelines by email.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        (function () {
+            const btn = document.getElementById('srvFinalBtn');
+            const spin = document.getElementById('srvFinalSpin');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    btn.classList.add('opacity-80', 'cursor-not-allowed');
+                    spin.classList.remove('hidden');
+                    setTimeout(() => { btn.classList.remove('opacity-80', 'cursor-not-allowed'); spin.classList.add('hidden'); }, 1200);
+                });
+            }
+        })();
+    </script>
+
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+    <script src="./docs/javascript/footer.js"></script>
+</body>
+
+</html>

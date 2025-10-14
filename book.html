@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO SERVICES</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- seo -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#fbb03b]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+
+    <section id="booking-hero" class="relative isolate bg-black text-zinc-100">
+        <div id="navbar"></div>
+        <div class="absolute inset-0 -z-10">
+            <div class="h-full w-full bg-center bg-cover"
+                style="background-image:url('/docs/assets/images/booking-hero.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90"></div>
+        </div>
+
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div data-aos="fade-up">
+                    <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Booking</p>
+                    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-semibold">Check availability for your date
+                    </h1>
+                    <p class="mt-5 text-zinc-300 max-w-xl">Choose a category, add your date and location. We’ll confirm
+                        availability and follow up by email. No online payment.</p>
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="#packages"
+                            class="inline-flex items-center rounded-sm border border-white/15 px-6 py-3 text-sm tracking-wide hover:bg-white/5 transition">View
+                            Packages</a>
+                        <a href="#booking-form"
+                            class="inline-flex items-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm tracking-wide hover:opacity-80 transition">Go
+                            to Form<i class="fa-solid fa-arrow-right ml-2"></i></a>
+                    </div>
+                    <div class="mt-6 flex flex-wrap items-center gap-5 text-sm text-zinc-400">
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt"></i> Typically replies
+                            within 1–2 business days</span>
+                        <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Metro area
+                            + regional travel</span>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+                    <form id="quickBooking" class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="qb_category" class="block text-sm text-zinc-300 mb-2">Category</label>
+                            <div class="relative">
+                                <span
+                                    class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                        class="fa-solid fa-list"></i></span>
+                                <select id="qb_category" name="cat"
+                                    class="w-full appearance-none rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-10 py-3 text-zinc-100">
+                                    <option value="" selected>Select a category</option>
+                                    <option value="theatre">Theatre</option>
+                                    <option value="events">Corporate & Events</option>
+                                </select>
+                                <span
+                                    class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                        class="fa-solid fa-angle-down"></i></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="qb_date" class="block text-sm text-zinc-300 mb-2">Date needed</label>
+                            <div class="relative">
+                                <span
+                                    class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                        class="fa-solid fa-calendar-day"></i></span>
+                                <input id="qb_date" name="date" type="date"
+                                    class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="qb_location" class="block text-sm text-zinc-300 mb-2">Location</label>
+                            <div class="relative">
+                                <span
+                                    class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                        class="fa-solid fa-location-dot"></i></span>
+                                <input id="qb_location" name="loc" type="text" placeholder="Venue or city"
+                                    class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500">
+                            </div>
+                        </div>
+
+                        <button id="qb_btn" type="submit"
+                            class="mt-2 inline-flex items-center justify-center rounded-xl border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                            <span id="qb_text">Check Availability</span>
+                            <svg id="qb_spin" class="ml-3 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24" fill="none">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                                </path>
+                            </svg>
+                        </button>
+                        <p class="text-xs text-zinc-400">Submitting this form won’t take payment. We’ll confirm details
+                            by email.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const form = document.getElementById('quickBooking');
+            const btn = document.getElementById('qb_btn');
+            const txt = document.getElementById('qb_text');
+            const spin = document.getElementById('qb_spin');
+
+            function setLoading(s) {
+                if (s) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.classList.add('opacity-80', 'cursor-not-allowed');
+                    spin.classList.remove('hidden');
+                    txt.textContent = 'Preparing...';
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    spin.classList.add('hidden');
+                    txt.textContent = 'Check Availability';
+                }
+            }
+
+            function setFromParams() {
+                const p = new URLSearchParams(window.location.search);
+                const cat = p.get('cat') || '';
+                const date = p.get('date') || '';
+                const loc = p.get('loc') || '';
+                const sel = document.getElementById('qb_category');
+                const d = document.getElementById('qb_date');
+                const l = document.getElementById('qb_location');
+                if (cat) sel.value = cat;
+                if (date) d.value = date;
+                if (loc) l.value = decodeURIComponent(loc);
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                setLoading(true);
+                const data = new FormData(form);
+                const params = new URLSearchParams();
+                for (const [k, v] of data.entries()) {
+                    if (v) params.set(k, v);
+                }
+                const url = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + '#booking-form';
+                history.replaceState(null, '', url);
+                const target = document.querySelector('#booking-form') || document.querySelector('#packages') || document.body;
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setLoading(false);
+                }, 500);
+            });
+
+            setFromParams();
+        })();
+    </script>
+
+    <section id="packages" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Packages</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Choose a path and tailor it</h2>
+                <p class="mt-3 text-zinc-300">Theatre or Corporate &amp; Events. Select a package to prefill your
+                    booking.</p>
+            </div>
+
+            <div class="mt-8" data-aos="fade-up" data-aos-delay="50" role="tablist" aria-label="Package categories">
+                <div class="inline-flex rounded-xl border border-white/10 bg-white/[0.02] p-1">
+                    <button id="tab-theatre" role="tab" aria-selected="true" aria-controls="panel-theatre"
+                        class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium bg-white/10 ring-1 ring-white/10">
+                        <i class="fa-solid fa-masks-theater"></i> Theatre
+                    </button>
+                    <button id="tab-events" role="tab" aria-selected="false" aria-controls="panel-events"
+                        class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-zinc-300 hover:bg-white/[0.06]">
+                        <i class="fa-solid fa-people-group"></i> Corporate &amp; Events
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <div id="panel-theatre" role="tabpanel" aria-labelledby="tab-theatre">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Essential</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>
+                                    Dialogue-first capture</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Discreet
+                                    on-site footprint</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Standard
+                                    delivery</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=theatre&pkg=theatre-essential"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="theatre" data-pkg="theatre-essential">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#theatre"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Popular</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Standard</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Multi-mic
+                                    capture</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>
+                                    Scene-aware balancing</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Clear
+                                    timelines</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=theatre&pkg=theatre-standard"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="theatre" data-pkg="theatre-standard">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#theatre"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Most
+                                    Booked</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Premium</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Expanded
+                                    mic plan</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Optional
+                                    stems export</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Priority
+                                    turnaround</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=theatre&pkg=theatre-premium"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="theatre" data-pkg="theatre-premium">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#theatre"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-mask"></i> Theatre
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Custom</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Enterprise</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Complex /
+                                    multi-night</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Bespoke
+                                    deliverables</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> On-site
+                                    coordination</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=theatre&pkg=theatre-enterprise"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="theatre" data-pkg="theatre-enterprise">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#theatre"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="panel-events" role="tabpanel" aria-labelledby="tab-events" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Presentation Capture</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Keynotes /
+                                    talks</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Podium or
+                                    clip mic</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Clean room
+                                    feed</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=events&pkg=events-presentation"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="events" data-pkg="events-presentation">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#events"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Best
+                                    Value</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Multi-Speaker / Panel</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Multiple
+                                    mics</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Tech
+                                    liaison</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Consistent
+                                    levels</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=events&pkg=events-panel"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="events" data-pkg="events-panel">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#events"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+
+                        <article
+                            class="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7 hover:bg-white/[0.04] transition">
+                            <div class="flex items-center justify-between">
+                                <div
+                                    class="text-xs uppercase tracking-widest text-zinc-400 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-people-group"></i> Events
+                                </div>
+                                <span
+                                    class="rounded-full px-2 py-0.5 text-[10px] tracking-widest bg-white/10 text-zinc-300">Pro</span>
+                            </div>
+                            <h3 class="mt-3 text-xl font-semibold">Broadcast-Ready Event</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-zinc-300">
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> Live mix
+                                    with safety</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i>
+                                    Multichannel options</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check mt-0.5 text-zinc-500"></i> On-site
+                                    coordination</li>
+                            </ul>
+                            <div class="mt-6 flex flex-col gap-2">
+                                <a href="/book.html?cat=events&pkg=events-broadcast"
+                                    class="req-btn inline-flex items-center justify-center rounded-sm border border-zinc-100 bg-zinc-100 text-black px-4 py-2 text-sm tracking-wide transition pkg-select"
+                                    data-cat="events" data-pkg="events-broadcast">
+                                    Request this package <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                                <a href="/services.html#events"
+                                    class="inline-flex items-center justify-center rounded-sm border border-white/15 px-4 py-2 text-sm tracking-wide hover:bg-white/5 transition">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 h-px bg-white/10"></div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const tabTheatre = document.getElementById('tab-theatre');
+            const tabEvents = document.getElementById('tab-events');
+            const panelTheatre = document.getElementById('panel-theatre');
+            const panelEvents = document.getElementById('panel-events');
+
+            function setTab(which) {
+                const isTheatre = which === 'theatre';
+                tabTheatre.setAttribute('aria-selected', isTheatre ? 'true' : 'false');
+                tabEvents.setAttribute('aria-selected', !isTheatre ? 'true' : 'false');
+
+                tabTheatre.classList.toggle('bg-white/10', isTheatre);
+                tabTheatre.classList.toggle('ring-1', isTheatre);
+                tabTheatre.classList.toggle('ring-white/10', isTheatre);
+                tabTheatre.classList.toggle('text-zinc-300', !isTheatre);
+
+                tabEvents.classList.toggle('bg-white/10', !isTheatre);
+                tabEvents.classList.toggle('ring-1', !isTheatre);
+                tabEvents.classList.toggle('ring-white/10', !isTheatre);
+                tabEvents.classList.toggle('text-zinc-300', isTheatre);
+
+                panelTheatre.classList.toggle('hidden', !isTheatre);
+                panelEvents.classList.toggle('hidden', isTheatre);
+            }
+
+            tabTheatre.addEventListener('click', () => setTab('theatre'));
+            tabEvents.addEventListener('click', () => setTab('events'));
+
+            const params = new URLSearchParams(location.search);
+            const catParam = (params.get('cat') || '').toLowerCase();
+            if (catParam === 'events') setTab('events'); else setTab('theatre');
+
+            function setBtnLoading(btn, s) {
+                const icon = btn.querySelector('i.fa-arrow-right');
+                if (s) {
+                    btn.setAttribute('disabled', 'true');
+                    btn.classList.add('opacity-80', 'cursor-not-allowed');
+                    if (icon) { icon.classList.add('hidden'); }
+                    const spin = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    spin.setAttribute('viewBox', '0 0 24 24');
+                    spin.classList.add('ml-2', 'h-4', 'w-4', 'animate-spin');
+                    spin.innerHTML = '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>';
+                    btn.appendChild(spin);
+                    btn._spin = spin;
+                } else {
+                    btn.removeAttribute('disabled');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (btn._spin) { btn._spin.remove(); btn._spin = null; }
+                    if (icon) { icon.classList.remove('hidden'); }
+                }
+            }
+
+            document.querySelectorAll('.pkg-select').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const cat = btn.dataset.cat;
+                    const pkg = btn.dataset.pkg;
+                    setBtnLoading(btn, true);
+                    const p = new URLSearchParams(location.search);
+                    if (cat) p.set('cat', cat);
+                    if (pkg) p.set('pkg', pkg);
+                    const newUrl = location.pathname + '?' + p.toString() + '#booking-form';
+                    history.replaceState(null, '', newUrl);
+                    const target = document.querySelector('#booking-form');
+                    setTimeout(() => {
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setBtnLoading(btn, false);
+                    }, 450);
+                });
+            });
+        })();
+    </script>
+
+    <section id="addons" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-3xl" data-aos="fade-up">
+                <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Add-ons</p>
+                <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Fine-tune your booking</h2>
+                <p class="mt-3 text-zinc-300">Optional extras to match your stage, schedule, and delivery needs.</p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article data-aos="fade-up"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="extra-lav" data-price="40">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Extra Lavalier Mic</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Add one discreet lav for an additional
+                                        performer or host.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$40</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="50"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="ambience-mic" data-price="30">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-wave-square"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Room Ambience Mic</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Capture natural room tone for a fuller, live
+                                        feel.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$30</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="100"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="stems-export" data-price="60">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-sliders"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Isolated Stems Export</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Receive isolated tracks for post-mix
+                                        flexibility.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$60</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article data-aos="fade-up"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="priority-turnaround" data-price="80">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Priority Turnaround</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Accelerated delivery on eligible packages.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$80</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="50"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="tech-liaison" data-price="50">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-people-arrows"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Tech Liaison</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Coordination with venue/video teams and stage
+                                        management.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$50</span>
+                        </div>
+                    </label>
+                </article>
+
+                <article data-aos="fade-up" data-aos-delay="100"
+                    class="addon-card group rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition"
+                    data-cat="theatre,events">
+                    <label class="cursor-pointer block p-6 sm:p-7">
+                        <input type="checkbox" class="addon-input sr-only" value="multitrack-archive" data-price="90">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/20 flex items-center justify-center">
+                                    <i class="fa-solid fa-hard-drive"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Multitrack Archive</h3>
+                                    <p class="mt-1 text-sm text-zinc-300">Long-term archive delivery in your preferred
+                                        format.</p>
+                                </div>
+                            </div>
+                            <span class="price text-sm px-2 py-1 rounded-md bg-white/10 text-zinc-200">$90</span>
+                        </div>
+                    </label>
+                </article>
+            </div>
+
+            <div class="mt-8"></div>
+
+            <div id="addons-summary"
+                class="sticky bottom-4 z-10 max-w-3xl mx-auto flex items-center gap-4 rounded-xl border border-white/10 bg-black px-4 py-3">
+                <div class="flex items-center gap-2 text-sm text-zinc-300">
+                    <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+                    <span><span id="addons-count" class="font-semibold">0</span> selected</span>
+                </div>
+                <div class="ml-auto flex items-center gap-3">
+                    <div class="text-sm text-zinc-400">Subtotal</div>
+                    <div id="addons-total" class="text-lg font-semibold">$0</div>
+                    <button id="addons-continue"
+                        class="inline-flex items-center justify-center rounded-lg border border-zinc-100 bg-zinc-100 text-black px-5 py-2.5 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                        <span id="addons-continue-text">Continue to Booking</span>
+                        <svg id="addons-continue-spin" class="ml-2 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24"
+                            fill="none">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(location.search);
+            const currentCat = (params.get('cat') || '').toLowerCase();
+            document.querySelectorAll('.addon-card').forEach(card => {
+                const cats = (card.dataset.cat || '').split(',').map(s => s.trim().toLowerCase());
+                if (currentCat && cats.length && !cats.includes(currentCat)) {
+                    card.classList.add('opacity-30', 'pointer-events-none');
+                }
+            });
+
+            const inputs = Array.from(document.querySelectorAll('.addon-input'));
+            const totalEl = document.getElementById('addons-total');
+            const countEl = document.getElementById('addons-count');
+            const btn = document.getElementById('addons-continue');
+            const btnText = document.getElementById('addons-continue-text');
+            const btnSpin = document.getElementById('addons-continue-spin');
+
+            function money(n) { return '$' + Number(n).toFixed(0); }
+
+            function syncFromURL() {
+                const selected = (params.get('addons') || '').split(',').map(s => s.trim()).filter(Boolean);
+                inputs.forEach(i => { i.checked = selected.includes(i.value); });
+                recalc();
+            }
+
+            function recalc() {
+                let sum = 0, cnt = 0;
+                inputs.forEach(i => {
+                    if (i.checked) {
+                        cnt++;
+                        sum += Number(i.dataset.price || 0);
+                        i.closest('.addon-card').classList.add('ring-1', 'ring-emerald-400/40');
+                    } else {
+                        i.closest('.addon-card').classList.remove('ring-1', 'ring-emerald-400/40');
+                    }
+                });
+                totalEl.textContent = money(sum);
+                countEl.textContent = String(cnt);
+            }
+
+            inputs.forEach(i => i.addEventListener('change', () => {
+                recalc();
+            }));
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.setAttribute('disabled', 'true');
+                btn.classList.add('opacity-80', 'cursor-not-allowed');
+                btnSpin.classList.remove('hidden');
+                btnText.textContent = 'Updating…';
+
+                const selected = inputs.filter(i => i.checked).map(i => i.value);
+                const p = new URLSearchParams(location.search);
+                if (selected.length) p.set('addons', selected.join(',')); else p.delete('addons');
+                const newUrl = location.pathname + '?' + p.toString() + '#booking-form';
+                history.replaceState(null, '', newUrl);
+
+                const target = document.querySelector('#booking-form');
+                setTimeout(() => {
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    btn.removeAttribute('disabled');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    btnSpin.classList.add('hidden');
+                    btnText.textContent = 'Continue to Booking';
+                }, 500);
+            });
+
+            syncFromURL();
+        })();
+    </script>
+
+
+    <section id="booking-form" class="bg-black text-zinc-100">
+        <div class="md:max-w-[85%] mx-auto px-4 sm:px-6 md:py-20 py-14">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="relative rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+                        <div class="absolute -top-16 -right-10 h-40 w-40 rounded-full blur-3xl opacity-20"
+                            style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+                        <div class="absolute -bottom-16 -left-10 h-56 w-56 rounded-full blur-3xl opacity-20"
+                            style="background: radial-gradient(50% 50% at 50% 50%, #ffffff22 0%, #00000000 70%);"></div>
+
+                        <div class="max-w-2xl" data-aos="fade-up">
+                            <p class="uppercase tracking-[0.25em] text-xs text-zinc-400">Booking</p>
+                            <h2 class="mt-2 text-3xl sm:text-4xl font-semibold">Tell us about your date</h2>
+                            <p class="mt-2 text-zinc-300">No online payment. We’ll confirm availability and follow up by
+                                email.</p>
+                        </div>
+
+                        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST" novalidate
+                            class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5" data-aos="fade-up" data-aos-delay="100">
+                            <input type="hidden" name="access_key" value="e12176ee-96dc-4b65-a8d5-eb036298ba77">
+                            <input type="hidden" name="from_name" value="Website Booking">
+                            <input type="hidden" name="subject" value="New Booking Request">
+                            <input type="hidden" id="hidden_pkg" name="selected_package" value="">
+                            <input type="hidden" id="hidden_addons" name="selected_addons" value="">
+                            <input type="hidden" id="hidden_addons_total" name="addons_subtotal" value="0">
+                            <input type="checkbox" id="botcheck" name="botcheck" class="hidden" tabindex="-1"
+                                autocomplete="off">
+                            <input type="text" id="website" name="website" class="hidden" tabindex="-1"
+                                autocomplete="off">
+
+                            <div class="col-span-1">
+                                <label for="bk_name" class="block text-sm text-zinc-300 mb-2">Full Name<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-user"></i></span>
+                                    <input id="bk_name" name="name" type="text" required minlength="2"
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500"
+                                        placeholder="Your name">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_email" class="block text-sm text-zinc-300 mb-2">Email<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-envelope"></i></span>
+                                    <input id="bk_email" name="email" type="email" required
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500"
+                                        placeholder="you@email.com">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_phone" class="block text-sm text-zinc-300 mb-2">Phone</label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-phone"></i></span>
+                                    <input id="bk_phone" name="phone" type="tel" inputmode="tel"
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500"
+                                        placeholder="+00 000 000 000">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_org" class="block text-sm text-zinc-300 mb-2">Organisation</label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-building"></i></span>
+                                    <input id="bk_org" name="organisation" type="text"
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500"
+                                        placeholder="Company or group">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_cat" class="block text-sm text-zinc-300 mb-2">Category<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-list"></i></span>
+                                    <select id="bk_cat" name="category" required
+                                        class="w-full appearance-none rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-10 py-3 text-zinc-100">
+                                        <option value="" disabled selected>Select a category</option>
+                                        <option value="theatre">Theatre</option>
+                                        <option value="events">Corporate & Events</option>
+                                    </select>
+                                    <span
+                                        class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-angle-down"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_pkg" class="block text-sm text-zinc-300 mb-2">Package<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-box-open"></i></span>
+                                    <select id="bk_pkg" name="package" required
+                                        class="w-full appearance-none rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-10 py-3 text-zinc-100">
+                                        <option value="" disabled selected>Select a package</option>
+                                    </select>
+                                    <span
+                                        class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-angle-down"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_date" class="block text-sm text-zinc-300 mb-2">Date<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-calendar-day"></i></span>
+                                    <input id="bk_date" name="date" type="date" required
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_time" class="block text-sm text-zinc-300 mb-2">Start Time</label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-clock"></i></span>
+                                    <input id="bk_time" name="time" type="time"
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100">
+                                </div>
+                            </div>
+
+                            <div class="col-span-1">
+                                <label for="bk_duration" class="block text-sm text-zinc-300 mb-2">Estimated
+                                    Duration</label>
+                                <div class="relative">
+                                    <span
+                                        class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-hourglass-half"></i></span>
+                                    <select id="bk_duration" name="duration"
+                                        class="w-full appearance-none rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-10 py-3 text-zinc-100">
+                                        <option value="" selected>Select duration</option>
+                                        <option>Up to 1 hour</option>
+                                        <option>1–2 hours</option>
+                                        <option>2–4 hours</option>
+                                        <option>4+ hours / Full day</option>
+                                    </select>
+                                    <span
+                                        class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400"><i
+                                            class="fa-solid fa-angle-down"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="bk_location" class="block text-sm text-zinc-300 mb-2">Location<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <span class="pointer-events-none absolute left-3 top-3 text-zinc-400"><i
+                                            class="fa-solid fa-location-dot"></i></span>
+                                    <input id="bk_location" name="location" type="text" required
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none pl-10 pr-3 py-3 text-zinc-100 placeholder:text-zinc-500"
+                                        placeholder="Venue name, address, city">
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="bk_notes" class="block text-sm text-zinc-300 mb-2">Notes<span
+                                        class="text-zinc-400"> *</span></label>
+                                <div class="relative">
+                                    <textarea id="bk_notes" name="message" required minlength="10" rows="6"
+                                        class="w-full rounded-xl bg-black/40 border border-white/10 focus:border-white/20 focus:ring-0 outline-none px-4 py-3 text-zinc-100 placeholder:text-zinc-500 resize-y"
+                                        placeholder="Share schedule, tech needs, deliverables, access info"></textarea>
+                                    <div class="absolute bottom-2 right-3 text-xs text-zinc-500"><span
+                                            id="bk_char">0</span>/1000</div>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2 flex items-start gap-3">
+                                <input id="bk_consent" name="consent" type="checkbox" required
+                                    class="mt-1 h-4 w-4 rounded border-white/20 bg-black/40 text-black focus:ring-0 focus:outline-none">
+                                <label for="bk_consent" class="text-sm text-zinc-300">I understand this is a booking
+                                    request and payment instructions will be emailed after confirmation.</label>
+                            </div>
+
+                            <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+                                <button id="bk_submit" type="submit"
+                                    class="inline-flex items-center justify-center rounded-xl border border-zinc-100 bg-zinc-100 text-black px-6 py-3 text-sm font-medium tracking-wide hover:opacity-80 transition">
+                                    <span id="bk_btn_text">Submit Booking Request</span>
+                                    <svg id="bk_btn_spin" class="ml-3 h-4 w-4 animate-spin hidden" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor">
+                                        </circle>
+                                        <path class="opacity-75" fill="currentColor"
+                                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                                    </svg>
+                                </button>
+                                <p class="text-sm text-zinc-400">Need to adjust packages or add-ons? <a href="#packages"
+                                        class="underline hover:opacity-80">Edit selection</a> · <a href="#addons"
+                                        class="underline hover:opacity-80">Add-ons</a></p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <p id="bk_alert" class="hidden text-sm rounded-xl px-4 py-3" role="alert"
+                                    aria-live="polite"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <aside class="lg:col-span-1">
+                    <div class="sticky top-28 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-7">
+                        <h3 class="text-xl font-semibold">Booking Summary</h3>
+                        <div class="mt-4 space-y-3 text-sm">
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="text-zinc-400">Category</span>
+                                <span id="sum_cat" class="text-zinc-100">—</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="text-zinc-400">Package</span>
+                                <span id="sum_pkg" class="text-zinc-100">—</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="text-zinc-400">Date</span>
+                                <span id="sum_date" class="text-zinc-100">—</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="text-zinc-400">Time</span>
+                                <span id="sum_time" class="text-zinc-100">—</span>
+                            </div>
+                            <div class="flex items-start justify-between gap-4">
+                                <span class="text-zinc-400">Location</span>
+                                <span id="sum_loc" class="text-zinc-100 text-right max-w-[60%] line-clamp-3">—</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 border-t border-white/10 pt-5">
+                            <p class="text-sm text-zinc-400">Add-ons</p>
+                            <div id="sum_addons" class="mt-2 flex flex-wrap gap-2"></div>
+                            <div class="mt-3 flex items-center justify-between">
+                                <span class="text-sm text-zinc-400">Add-ons Subtotal</span>
+                                <span id="sum_addons_total" class="text-base font-semibold">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                            <div class="flex items-center gap-2 text-zinc-300 text-sm">
+                                <i class="fa-solid fa-circle-info"></i>
+                                No payment taken here. We’ll email confirmation and next steps.
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <div id="bookingPopup" class="fixed inset-0 z-[70] hidden bg-black/70 backdrop-blur">
+        <div
+            class="absolute left-1/2 top-1/2 w-[90%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-white/10 bg-zinc-900 p-6 text-zinc-100">
+            <div id="bpSending" class="flex flex-col items-center text-center gap-3">
+                <svg class="h-8 w-8 animate-spin" viewBox="0 0 24 24" fill="none">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+                <p class="text-lg font-medium">Submitting your request…</p>
+                <p class="text-sm text-zinc-400">Please wait a moment.</p>
+            </div>
+            <div id="bpSuccess" class="hidden flex flex-col items-center text-center gap-3">
+                <i class="fa-solid fa-circle-check text-3xl text-emerald-400"></i>
+                <p class="text-lg font-medium">Thanks! Your booking request was sent.</p>
+                <button type="button"
+                    class="bpClose inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm hover:bg-white/5 transition">Close</button>
+            </div>
+            <div id="bpError" class="hidden flex flex-col items-center text-center gap-3">
+                <i class="fa-solid fa-circle-exclamation text-3xl text-red-400"></i>
+                <p class="text-lg font-medium">Something went wrong.</p>
+                <p class="text-sm text-zinc-400">Please try again or email us directly.</p>
+                <button type="button"
+                    class="bpClose inline-flex items-center rounded-md border border-white/15 px-4 py-2 text-sm hover:bg-white/5 transition">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const form = document.getElementById('bookingForm');
+            const submitBtn = document.getElementById('bk_submit');
+            const btnText = document.getElementById('bk_btn_text');
+            const btnSpin = document.getElementById('bk_btn_spin');
+            const alertEl = document.getElementById('bk_alert');
+
+            const catEl = document.getElementById('bk_cat');
+            const pkgEl = document.getElementById('bk_pkg');
+            const dateEl = document.getElementById('bk_date');
+            const timeEl = document.getElementById('bk_time');
+            const locEl = document.getElementById('bk_location');
+            const notesEl = document.getElementById('bk_notes');
+            const charEl = document.getElementById('bk_char');
+
+            const sumCat = document.getElementById('sum_cat');
+            const sumPkg = document.getElementById('sum_pkg');
+            const sumDate = document.getElementById('sum_date');
+            const sumTime = document.getElementById('sum_time');
+            const sumLoc = document.getElementById('sum_loc');
+            const sumAddons = document.getElementById('sum_addons');
+            const sumAddonsTotal = document.getElementById('sum_addons_total');
+
+            const hiddenPkg = document.getElementById('hidden_pkg');
+            const hiddenAddons = document.getElementById('hidden_addons');
+            const hiddenAddonsTotal = document.getElementById('hidden_addons_total');
+
+            const popup = document.getElementById('bookingPopup');
+            const bpSending = document.getElementById('bpSending');
+            const bpSuccess = document.getElementById('bpSuccess');
+            const bpError = document.getElementById('bpError');
+            document.querySelectorAll('.bpClose').forEach(b => b.addEventListener('click', () => popup.classList.add('hidden')));
+
+            const PACKAGES = {
+                theatre: [
+                    { value: 'theatre-essential', label: 'Essential' },
+                    { value: 'theatre-standard', label: 'Standard' },
+                    { value: 'theatre-premium', label: 'Premium' },
+                    { value: 'theatre-enterprise', label: 'Enterprise' },
+                ],
+                events: [
+                    { value: 'events-presentation', label: 'Presentation Capture' },
+                    { value: 'events-panel', label: 'Multi-Speaker / Panel' },
+                    { value: 'events-broadcast', label: 'Broadcast-Ready Event' },
+                ]
+            };
+
+            const ADDON_MAP = {
+                'extra-lav': 'Extra Lavalier Mic',
+                'ambience-mic': 'Room Ambience Mic',
+                'stems-export': 'Isolated Stems Export',
+                'priority-turnaround': 'Priority Turnaround',
+                'tech-liaison': 'Tech Liaison',
+                'multitrack-archive': 'Multitrack Archive'
+            };
+            const ADDON_PRICE = {
+                'extra-lav': 40,
+                'ambience-mic': 30,
+                'stems-export': 60,
+                'priority-turnaround': 80,
+                'tech-liaison': 50,
+                'multitrack-archive': 90
+            };
+
+            function setBtnLoading(s) {
+                if (s) {
+                    submitBtn.setAttribute('disabled', 'true');
+                    submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+                    btnSpin.classList.remove('hidden');
+                    btnText.textContent = 'Submitting…';
+                } else {
+                    submitBtn.removeAttribute('disabled');
+                    submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    btnSpin.classList.add('hidden');
+                    btnText.textContent = 'Submit Booking Request';
+                }
+            }
+
+            function showPopupState(state) {
+                popup.classList.remove('hidden');
+                bpSending.classList.toggle('hidden', state !== 'sending');
+                bpSuccess.classList.toggle('hidden', state !== 'success');
+                bpError.classList.toggle('hidden', state !== 'error');
+            }
+
+            function money(n) { return '$' + Number(n || 0).toFixed(0); }
+
+            function populatePackages(cat, keepCurrent) {
+                pkgEl.innerHTML = '<option value="" disabled selected>Select a package</option>';
+                if (!PACKAGES[cat]) return;
+                PACKAGES[cat].forEach(p => {
+                    const opt = document.createElement('option');
+                    opt.value = p.value;
+                    opt.textContent = p.label;
+                    pkgEl.appendChild(opt);
+                });
+                if (keepCurrent && hiddenPkg.value) {
+                    pkgEl.value = hiddenPkg.value;
+                    if (!pkgEl.value) hiddenPkg.value = '';
+                }
+            }
+
+            function updateSummary() {
+                const catLabel = (catEl.value === 'theatre') ? 'Theatre' : (catEl.value === 'events') ? 'Corporate & Events' : '—';
+                const pkgLabel = (() => {
+                    const v = pkgEl.value;
+                    if (!v) return '—';
+                    const arr = PACKAGES[catEl.value] || [];
+                    const f = arr.find(x => x.value === v);
+                    return f ? f.label : v;
+                })();
+                sumCat.textContent = catLabel;
+                sumPkg.textContent = pkgLabel;
+                sumDate.textContent = dateEl.value || '—';
+                sumTime.textContent = timeEl.value || '—';
+                sumLoc.textContent = locEl.value || '—';
+                hiddenPkg.value = pkgEl.value || '';
+
+                const params = new URLSearchParams(location.search);
+                const addons = (params.get('addons') || '').split(',').map(s => s.trim()).filter(Boolean);
+                sumAddons.innerHTML = '';
+                let subtotal = 0;
+                addons.forEach(key => {
+                    const label = ADDON_MAP[key] || key;
+                    const chip = document.createElement('span');
+                    chip.className = 'text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-200';
+                    chip.textContent = label;
+                    sumAddons.appendChild(chip);
+                    subtotal += ADDON_PRICE[key] || 0;
+                });
+                if (addons.length === 0) {
+                    const chip = document.createElement('span');
+                    chip.className = 'text-xs px-2 py-1 rounded-md bg-white/10 text-zinc-400';
+                    chip.textContent = 'None selected';
+                    sumAddons.appendChild(chip);
+                }
+                sumAddonsTotal.textContent = money(subtotal);
+                hiddenAddons.value = addons.join(', ');
+                hiddenAddonsTotal.value = subtotal.toString();
+            }
+
+            function prefillFromParams() {
+                const p = new URLSearchParams(location.search);
+                const cat = (p.get('cat') || '').toLowerCase();
+                const pkg = (p.get('pkg') || '').toLowerCase();
+                const date = p.get('date') || '';
+                const loc = p.get('loc') ? decodeURIComponent(p.get('loc')) : '';
+
+                if (cat) { catEl.value = cat; populatePackages(cat, false); }
+                if (pkg) { hiddenPkg.value = pkg; populatePackages(cat || catEl.value, true); }
+                if (date) { dateEl.value = date; }
+                if (loc) { locEl.value = loc; }
+                updateSummary();
+            }
+
+            function markValidity(el, ok) {
+                if (ok) { el.classList.remove('border-red-500/40'); el.setAttribute('aria-invalid', 'false'); }
+                else { el.classList.add('border-red-500/40'); el.setAttribute('aria-invalid', 'true'); }
+            }
+
+            notesEl.addEventListener('input', () => {
+                const len = Math.min(1000, notesEl.value.length);
+                charEl.textContent = String(len);
+                if (notesEl.value.length > 1000) notesEl.value = notesEl.value.slice(0, 1000);
+            });
+
+            ['change', 'input', 'blur'].forEach(evt => {
+                [catEl, pkgEl, dateEl, timeEl, locEl].forEach(el => {
+                    el.addEventListener(evt, () => {
+                        if (el.required) markValidity(el, el.checkValidity());
+                        updateSummary();
+                    });
+                });
+            });
+
+            catEl.addEventListener('change', () => {
+                populatePackages(catEl.value, false);
+                updateSummary();
+            });
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                alertEl.classList.add('hidden');
+
+                const honeypot1 = document.getElementById('website').value;
+                const honeypot2 = document.getElementById('botcheck').checked;
+                if (honeypot1 || honeypot2) return;
+
+                const requiredIds = ['bk_name', 'bk_email', 'bk_cat', 'bk_pkg', 'bk_date', 'bk_location', 'bk_consent'];
+                let okAll = true;
+                requiredIds.forEach(id => {
+                    const el = document.getElementById(id);
+                    const ok = el.type === 'checkbox' ? el.checked : el.checkValidity();
+                    markValidity(el, ok);
+                    if (!ok) okAll = false;
+                });
+                if (!okAll) {
+                    showAlert('error', 'Please fill all required fields.');
+                    window.scrollTo({ top: form.offsetTop - 120, behavior: 'smooth' });
+                    return;
+                }
+
+                try {
+                    setBtnLoading(true);
+                    showPopupState('sending');
+                    const fd = new FormData(form);
+                    const res = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: fd,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    const result = await res.json();
+                    if (result.success) {
+                        form.reset();
+                        charEl.textContent = '0';
+                        updateSummary();
+                        showPopupState('success');
+                        setTimeout(() => popup.classList.add('hidden'), 3000);
+                    } else {
+                        showPopupState('error');
+                    }
+                } catch (err) {
+                    showPopupState('error');
+                } finally {
+                    setBtnLoading(false);
+                }
+            });
+
+            function showAlert(type, text) {
+                alertEl.className = 'text-sm rounded-xl px-4 py-3 ' + (type === 'success'
+                    ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20'
+                    : 'bg-red-500/10 text-red-300 border border-red-500/20');
+                alertEl.textContent = text;
+                alertEl.classList.remove('hidden');
+            }
+
+            populatePackages(catEl.value || 'theatre', false);
+            prefillFromParams();
+        })();
+    </script>
+
+
+
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+    <script src="./docs/javascript/footer.js"></script>
+</body>
+
+</html>
