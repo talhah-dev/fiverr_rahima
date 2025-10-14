@@ -1,7 +1,7 @@
 const mount = document.getElementById('navbar');
 if (mount) {
   mount.innerHTML = `
-<header id="siteHeader" class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-zinc-200 transition-all duration-300">
+<header data-aos="fade-down" id="siteHeader" class="sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-zinc-200 transition-all duration-300">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="h-16 md:h-24 flex items-center justify-between">
       <!-- Brand -->
@@ -70,15 +70,13 @@ if (mount) {
         </summary>
         <div class="pl-4 mt-2 space-y-2">
           <a href="/services.html#data-analysis" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">Data Analysis &amp; Insights</a>
-          <a href="/services.html#dashboards" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">Dashboard Design (Power BI / Looker)</a>
+          <a href="/services.html#dashboards" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">Dashboard Design</a>
           <a href="/services.html#etl" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">Data Cleaning &amp; ETL</a>
           <a href="/services.html#automation" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">Reporting Automation</a>
           <a href="/services.html#consulting" class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50">SQL / Python Consulting</a>
         </div>
       </details>
 
-      <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/testimonials.html"><i class="fa-regular fa-comments mr-2"></i>Testimonials</a>
-      <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/contact.html"><i class="fa-regular fa-envelope mr-2"></i>Contact</a>
       <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/resume/rahima-waheed-cv.pdf"><i class="fa-solid fa-file-arrow-down mr-2"></i>Download CV</a>
 
       <div class="pt-2 flex gap-2">
