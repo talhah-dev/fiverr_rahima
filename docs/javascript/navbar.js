@@ -77,7 +77,7 @@ if (mount) {
         </div>
       </details>
 
-      <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/resume/rahima-waheed-cv.pdf"><i class="fa-solid fa-file-arrow-down mr-2"></i>Download CV</a>
+      <a class="mobile-link block rounded-lg px-3 py-2 text-zinc-800 hover:bg-zinc-50" href="/docs/assets/rahima-waheed-cv.pdf"><i class="fa-solid fa-file-arrow-down mr-2"></i>Download CV</a>
 
       <div class="pt-2 flex gap-2">
         <a href="/contact.html" class="mobile-link flex-1 text-center rounded-lg border border-zinc-300 px-4 py-2 text-zinc-800 hover:bg-zinc-50">Contact</a>

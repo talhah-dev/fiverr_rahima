@@ -64,38 +64,39 @@
             class="absolute -top-24 -right-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-indigo-100 via-sky-100 to-emerald-100 blur-3xl">
         </div>
         <div
-            class="absolute -bottom-32 -left-24 h-[22rem] w-[22rem] rounded-full bg-gradient-to-tr from-emerald-50 via-sky-50 to-indigo-50 blur-3xl">
+            class="absolute bottom-20 -left-24 h-[22rem] w-[22rem] rounded-full bg-gradient-to-tr from-emerald-50 via-sky-50 to-indigo-50 blur-3xl">
         </div>
 
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 lg:pt-32 lg:pb-14 relative">
-            <div class="flex items-center gap-2 text-sm text-zinc-500" data-aos="fade-up" data-aos-duration="700">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-14 lg:pt-20 relative" data-aos="fade-up">
+            <div class="flex items-center gap-2 text-sm text-zinc-500">
                 <a href="/index.html" class="hover:text-indigo-600">Home</a>
                 <span>/</span>
                 <span class="text-zinc-800">Projects</span>
             </div>
 
             <div class="mt-8 grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6" data-aos="fade-right" data-aos-duration="700">
+                <div class="space-y-6">
                     <div
                         class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-700">
                         Case Studies • Dashboards • Automation</div>
                     <h1
-                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
+                        class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 leading-tight">
                         Projects & Case Studies</h1>
                     <p class="text-lg text-zinc-700">Selected work across education, operations, and analytics. Explore
                         dashboards, automations, and process improvements that delivered measurable outcomes.</p>
                     <div class="flex flex-wrap items-center gap-3">
                         <a href="/contact.html#hire"
-                            class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
+                            class="inline-flex md:w-auto w-full justify-center items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
                                 class="fa-solid fa-handshake-simple"></i>Start a Project</a>
-                        <a href="/resume/rahima-waheed-cv.pdf"
-                            class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
+                        <a href="/docs/assets/rahima-waheed-cv.pdf"
+                            class="inline-flex md:w-auto w-full justify-center items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
                                 class="fa-solid fa-file-arrow-down"></i>Download CV</a>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="700">
-                    <div class="col-span-2 rounded-3xl border border-zinc-200 bg-white/80 backdrop-blur p-6 shadow-sm">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-4" data-aos="fade-up" data-aos-duration="200">
+                    <div
+                        class="md:col-span-2 rounded-3xl border border-zinc-200 bg-white/80 backdrop-blur p-6 shadow-sm">
                         <div class="flex items-center gap-3">
                             <div class="h-10 w-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
                                 <i class="fa-regular fa-folder-open"></i>
@@ -105,17 +106,17 @@
                                 <p class="text-sm font-semibold text-zinc-900">Dashboards • Automation • Ops</p>
                             </div>
                         </div>
-                        <div class="mt-4 grid grid-cols-3 gap-3">
+                        <div class="mt-4 grid md:grid-cols-3 grid-cols-1 gap-3">
                             <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                <div class="text-xl font-extrabold text-zinc-900">3</div>
+                                <div class="text-xl font-semibold text-zinc-900">3</div>
                                 <div class="text-xs text-zinc-600">Featured</div>
                             </div>
                             <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                <div class="text-xl font-extrabold text-zinc-900">5+</div>
+                                <div class="text-xl font-semibold text-zinc-900">5+</div>
                                 <div class="text-xs text-zinc-600">Dashboards</div>
                             </div>
                             <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                <div class="text-xl font-extrabold text-zinc-900">10h</div>
+                                <div class="text-xl font-semibold text-zinc-900">10h</div>
                                 <div class="text-xs text-zinc-600">Saved /wk</div>
                             </div>
                         </div>
@@ -142,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="mt-6 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm" data-aos="fade-up"
+            <div class="mt-10 md:mt-20 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm" data-aos="fade-up"
                 data-aos-duration="700">
                 <div class="flex flex-col lg:flex-row lg:items-center gap-4">
                     <div class="flex flex-wrap items-center gap-2">
@@ -178,30 +179,12 @@
             </div>
         </div>
     </section>
-    <script>
-        (function () {
-            const chips = [...document.querySelectorAll('.filter-chip')];
-            chips.forEach(btn => btn.addEventListener('click', () => {
-                chips.forEach(b => b.classList.remove('active', 'bg-zinc-900', 'text-white'));
-                btn.classList.add('active', 'bg-zinc-900', 'text-white');
-                const f = btn.getAttribute('data-filter');
-                document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: f } }));
-            }));
-            const search = document.getElementById('project-search');
-            if (search) {
-                let t; search.addEventListener('input', () => {
-                    clearTimeout(t); t = setTimeout(() => {
-                        document.dispatchEvent(new CustomEvent('project-search', { detail: { q: search.value.trim() } }));
-                    }, 200);
-                });
-            }
-        })();
-    </script>
+
 
     <section id="projects-grid" class="relative bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-10 lg:pt-16">
             <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900">All Projects
+                <h2 class="text-3xl lg:text-5xl font-semibold tracking-tight text-zinc-900">All Projects
                 </h2>
                 <p class="mt-3 text-zinc-600">Browse by category or search across dashboards, automation, operations,
                     and analytics.</p>
@@ -213,7 +196,7 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/student-performance-dashboard.jpg"
+                        <img src="https://cdn.dribbble.com/userupload/4398602/file/original-e8d1fc840f34b0f58f597afda37e619d.png?resize=1504x1128&vertical=center"
                             alt="Student Performance Dashboard"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -236,7 +219,7 @@
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">SQL</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/student-performance.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -251,7 +234,8 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/ops-automation-bots.jpg" alt="Operations Automation Bots"
+                        <img src="https://cdn.dribbble.com/userupload/18323232/file/original-9002653a1971e8f9852689a68dbf7f47.png?resize=1504x1128&vertical=center"
+                            alt="Operations Automation Bots"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div class="p-6">
@@ -270,10 +254,9 @@
                             <button class="tag px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700"
                                 data-filter="operations">Operations</button>
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">Apps Script</span>
-                            <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">Excel VBA</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/ops-automation.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -288,7 +271,8 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/insurance-ops-insights.jpg" alt="Insurance Operations Insights"
+                        <img src="https://cdn.dribbble.com/userupload/44471332/file/44ca1d857a2a5661e5b2cf6b99d4b08a.jpg?resize=1504x1128&vertical=center"
+                            alt="Insurance Operations Insights"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div class="p-6">
@@ -310,7 +294,7 @@
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">R</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/insurance-ops.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -324,7 +308,8 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/upsaa-analytics.jpg" alt="UPSAA Event Analytics Portal"
+                        <img src="https://cdn.dribbble.com/userupload/11505863/file/original-7072db936cbb40cdbcc2191e8d614599.png?resize=1504x1128&vertical=center"
+                            alt="UPSAA Event Analytics Portal"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div class="p-6">
@@ -346,7 +331,7 @@
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">TypeScript</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/upsaa-analytics.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -360,7 +345,8 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/workflow-optimizer.jpg" alt="Workflow Optimizer"
+                        <img src="https://cdn.dribbble.com/userupload/43524611/file/original-589368e75c1debfe3c3caff2a91b1843.png?resize=1504x1128&vertical=center"
+                            alt="Workflow Optimizer"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div class="p-6">
@@ -382,7 +368,7 @@
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">HubSpot</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/workflow-optimizer.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -396,7 +382,8 @@
                     class="group rounded-2xl border border-zinc-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition"
                     data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <div class="aspect-[16/10] overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/kpi-suite.jpg" alt="KPI Dashboard Suite"
+                        <img src="https://cdn.dribbble.com/userupload/8978606/file/original-c8bce3bc4943d389dd2f5ff7e7605896.png?resize=1504x1128&vertical=center"
+                            alt="KPI Dashboard Suite"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div class="p-6">
@@ -418,7 +405,7 @@
                             <span class="px-3 py-1 rounded-full bg-zinc-100 text-xs text-zinc-700">SQL</span>
                         </div>
                         <div class="mt-5 flex items-center gap-2">
-                            <a href="/projects/kpi-suite.html"
+                            <a href="/projects.html"
                                 class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View</a>
                             <a href="/experience.html#timeline"
@@ -435,30 +422,11 @@
                 search term.</div>
         </div>
     </section>
-    <script>
-        (function () {
-            const section = document.getElementById('projects-grid');
-            if (!section) return;
-            const cards = [...section.querySelectorAll('[data-project]')];
-            const empty = document.getElementById('no-results');
-            cards.forEach(c => { const title = c.querySelector('h3')?.textContent || ''; const desc = c.querySelector('.desc')?.textContent || ''; const tags = [...c.querySelectorAll('.tag')].map(t => t.textContent).join(' '); const meta = (c.getAttribute('data-tags') || '') + ' ' + (c.getAttribute('data-org') || '') + ' ' + (c.getAttribute('data-tech') || ''); c._search = (title + ' ' + desc + ' ' + tags + ' ' + meta).toLowerCase(); });
-            let active = 'all'; let q = '';
-            function apply() {
-                let shown = 0;
-                cards.forEach(c => { const tags = (c.getAttribute('data-tags') || '').split(',').map(s => s.trim()); const matchFilter = (active === 'all') || tags.includes(active); const matchSearch = (!q) || c._search.includes(q); const vis = matchFilter && matchSearch; c.classList.toggle('hidden', !vis); if (vis) shown++; });
-                if (empty) empty.classList.toggle('hidden', shown !== 0);
-            }
-            document.addEventListener('project-filter', e => { active = (e.detail && e.detail.filter) || 'all'; apply(); });
-            document.addEventListener('project-search', e => { q = ((e.detail && e.detail.q) || '').toLowerCase(); apply(); });
-            section.querySelectorAll('.tag[data-filter]').forEach(t => { t.addEventListener('click', () => { const f = t.getAttribute('data-filter'); document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: f } })); }); });
-            apply();
-        })();
-    </script>
 
     <section id="case-studies" class="relative bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
             <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900">Featured Case
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-900">Featured Case
                     Studies</h2>
                 <p class="mt-3 text-zinc-600">Deep dives into outcomes, approach, and tools for high‑impact projects.
                 </p>
@@ -469,7 +437,7 @@
                     class="grid gap-6 lg:grid-cols-2 items-stretch rounded-3xl border border-zinc-200 bg-white overflow-hidden shadow-sm"
                     data-aos="fade-up" data-aos-duration="700">
                     <div class="relative overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/student-performance-dashboard.jpg"
+                        <img src="https://cdn.dribbble.com/userupload/4398602/file/original-e8d1fc840f34b0f58f597afda37e619d.png?resize=1504x1128&vertical=center"
                             alt="Student Performance Dashboard" class="h-full w-full object-cover" />
                     </div>
                     <div class="p-6 lg:p-10 flex flex-col justify-center">
@@ -498,12 +466,12 @@
                             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700">SQL</span>
                             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700">Apps Script</span>
                         </div>
-                        <div class="mt-6 flex items-center gap-2">
-                            <a href="/projects/student-performance.html"
-                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
+                        <div class="mt-6 flex items-center gap-2 md:flex-row flex-col">
+                            <a href="/projects.html"
+                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 md:w-auto w-full justify-center px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View Case Study</a>
                             <a href="/experience.html#timeline"
-                                class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
+                                class="inline-flex items-center gap-2 rounded-xl border md:w-auto w-full justify-center border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
                                     class="fa-solid fa-timeline"></i>See Role</a>
                         </div>
                     </div>
@@ -538,18 +506,18 @@
                             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700">Google
                                 Workspace</span>
                         </div>
-                        <div class="mt-6 flex items-center gap-2">
-                            <a href="/projects/ops-automation.html"
-                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
+                        <div class="mt-6 flex items-center gap-2 md:flex-row flex-col">
+                            <a href="/projects.html"
+                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 md:w-auto w-full justify-center px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View Case Study</a>
                             <a href="/experience.html#timeline"
-                                class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
+                                class="inline-flex items-center gap-2 rounded-xl border md:w-auto w-full justify-center border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
                                     class="fa-solid fa-timeline"></i>See Role</a>
                         </div>
                     </div>
                     <div class="relative overflow-hidden bg-zinc-100 order-1 lg:order-2">
-                        <img src="/assets/img/projects/ops-automation-bots.jpg" alt="Operations Automation Bots"
-                            class="h-full w-full object-cover" />
+                        <img src="https://cdn.dribbble.com/userupload/18323232/file/original-9002653a1971e8f9852689a68dbf7f47.png?resize=1504x1128&vertical=center"
+                            alt="Operations Automation Bots" class="h-full w-full object-cover" />
                     </div>
                 </article>
 
@@ -557,8 +525,8 @@
                     class="grid gap-6 lg:grid-cols-2 items-stretch rounded-3xl border border-zinc-200 bg-white overflow-hidden shadow-sm"
                     data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
                     <div class="relative overflow-hidden bg-zinc-100">
-                        <img src="/assets/img/projects/insurance-ops-insights.jpg" alt="Insurance Operations Insights"
-                            class="h-full w-full object-cover" />
+                        <img src="https://cdn.dribbble.com/userupload/44471332/file/44ca1d857a2a5661e5b2cf6b99d4b08a.jpg?resize=1504x1128&vertical=center"
+                            alt="Insurance Operations Insights" class="h-full w-full object-cover" />
                     </div>
                     <div class="p-6 lg:p-10 flex flex-col justify-center">
                         <div class="flex items-center gap-2 text-xs text-zinc-500">
@@ -586,12 +554,12 @@
                             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700">R</span>
                             <span class="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700">Power BI</span>
                         </div>
-                        <div class="mt-6 flex items-center gap-2">
-                            <a href="/projects/insurance-ops.html"
-                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
+                        <div class="mt-6 flex items-center gap-2 md:flex-row flex-col">
+                            <a href="/projects.html"
+                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 md:w-auto w-full justify-center px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>View Case Study</a>
                             <a href="/experience.html#timeline"
-                                class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
+                                class="inline-flex items-center gap-2 rounded-xl border md:w-auto w-full justify-center border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
                                     class="fa-solid fa-timeline"></i>See Role</a>
                         </div>
                     </div>
@@ -602,9 +570,9 @@
 
 
     <section id="tech-legend" class="relative bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
             <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900">Tech Stack</h2>
+                <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-900">Tech Stack</h2>
                 <p class="mt-3 text-zinc-600">Tap a tool to instantly filter the projects grid via search.</p>
             </div>
 
@@ -651,86 +619,14 @@
             </div>
         </div>
     </section>
-    <script>
-        (function () {
-            const chips = [...document.querySelectorAll('.stack-chip')];
-            chips.forEach(btn => btn.addEventListener('click', () => {
-                chips.forEach(b => b.classList.remove('bg-zinc-900', 'text-white'));
-                const q = btn.getAttribute('data-q') || '';
-                if (q) { btn.classList.add('bg-zinc-900', 'text-white'); }
-                document.dispatchEvent(new CustomEvent('project-search', { detail: { q } }));
-                if (!q) { document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: 'all' } })); }
-            }));
-        })();
-    </script>
 
-    <section id="clients" class="relative bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-24">
-            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900">Organizations
-                </h2>
-                <p class="mt-3 text-zinc-600">Work delivered with schools, non‑profits, and financial services.</p>
-            </div>
-
-            <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6" data-aos="fade-up"
-                data-aos-duration="700" data-aos-delay="50">
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/success-academy.svg" alt="Success Academy Charter Schools"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">Success Academy Charter Schools</span>
-                </a>
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/global-atlantic.svg" alt="Global Atlantic Financial Group"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">Global Atlantic Financial Group</span>
-                </a>
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/upsaa.svg" alt="United Pakistani Students & Alumni Association"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">United Pakistani Students & Alumni Association</span>
-                </a>
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/wartburg.svg" alt="Wartburg College"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">Wartburg College</span>
-                </a>
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/uwc-hk.svg" alt="Li Po Chun United World College of Hong Kong"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">Li Po Chun United World College of Hong Kong</span>
-                </a>
-                <a href="/experience.html#timeline"
-                    class="group flex items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-md transition">
-                    <img src="/assets/img/logos/yes-program.svg" alt="Kennedy‑Lugar YES Program"
-                        class="h-10 w-auto grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition" />
-                    <span class="sr-only">Kennedy‑Lugar YES Program</span>
-                </a>
-            </div>
-
-            <div class="mt-10 flex flex-wrap items-center gap-3" data-aos="fade-up" data-aos-duration="700"
-                data-aos-delay="100">
-                <a href="/projects.html#case-studies"
-                    class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
-                        class="fa-regular fa-folder-open"></i>View Case Studies</a>
-                <a href="/contact.html#hire"
-                    class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-zinc-50 transition"><i
-                        class="fa-solid fa-handshake-simple"></i>Hire Me</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects-cta" class="relative bg-white">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-24">
+    <section id="projects-cta" class="relative bg-white overflow-x-hidden pb-10">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-16 lg:pt-24">
             <div
-                class="rounded-3xl border border-zinc-200 bg-gradient-to-tr from-indigo-50 via-sky-50 to-emerald-50 p-8 lg:p-12 shadow-sm">
+                class="rounded-3xl border border-zinc-200 bg-gradient-to-tr from-indigo-50 via-sky-50 to-emerald-50 p-4 lg:p-12 shadow-sm">
                 <div class="grid items-center gap-10 lg:grid-cols-2">
                     <div class="space-y-6" data-aos="fade-right" data-aos-duration="700">
-                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900">Let’s build your
+                        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-900">Let’s build your
                             next project</h2>
                         <p class="text-zinc-700">Dashboards, automation, and process design that turn data into
                             decisions. Share your scope and I’ll propose a clear plan, timeline, and deliverables.</p>
@@ -744,41 +640,42 @@
                         </ul>
                         <div class="flex flex-wrap items-center gap-3">
                             <a href="/contact.html#hire"
-                                class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
+                                class="inline-flex md:w-auto w-full justify-center items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:opacity-90 transition"><i
                                     class="fa-solid fa-handshake-simple"></i>Start a Project</a>
                             <a href="mailto:rahimarizmi.waheed@gmail.com"
-                                class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-white transition"><i
+                                class="inline-flex md:w-auto w-full justify-center items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-white transition"><i
                                     class="fa-regular fa-envelope"></i>Email</a>
                             <a href="https://www.linkedin.com/in/rahimawaheed/" target="_blank" rel="noopener"
-                                class="inline-flex items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-white transition"><i
+                                class="inline-flex md:w-auto w-full justify-center items-center gap-2 rounded-xl border border-zinc-300 px-5 py-3 text-zinc-800 hover:bg-white transition"><i
                                     class="fa-brands fa-linkedin"></i>LinkedIn</a>
                         </div>
                         <div class="text-sm text-zinc-600">📍 New York, USA • 📩 rahimarizmi.waheed@gmail.com</div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="700">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-4" data-aos="fade-left" data-aos-duration="700">
                         <div
-                            class="col-span-2 rounded-3xl border border-zinc-200 bg-white/80 backdrop-blur p-6 shadow-sm">
+                            class="md:col-span-2 rounded-3xl border border-zinc-200 bg-white/80 backdrop-blur p-6 shadow-sm">
                             <div class="flex items-center gap-3">
                                 <div
-                                    class="h-10 w-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
-                                    <i class="fa-regular fa-folder-open"></i></div>
+                                    class="h-10 w-10 shrink-0 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                </div>
                                 <div>
                                     <p class="text-xs text-zinc-500">Project Types</p>
                                     <p class="text-sm font-semibold text-zinc-900">Dashboards • Automation • Ops</p>
                                 </div>
                             </div>
-                            <div class="mt-4 grid grid-cols-3 gap-3">
+                            <div class="mt-4 grid md:grid-cols-3 grid-cols-1 gap-3">
                                 <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                    <div class="text-xl font-extrabold text-zinc-900">3</div>
+                                    <div class="text-xl font-semibold text-zinc-900">3</div>
                                     <div class="text-xs text-zinc-600">Featured</div>
                                 </div>
                                 <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                    <div class="text-xl font-extrabold text-zinc-900">5+</div>
+                                    <div class="text-xl font-semibold text-zinc-900">5+</div>
                                     <div class="text-xs text-zinc-600">Dashboards</div>
                                 </div>
                                 <div class="rounded-lg border border-zinc-200 p-3 text-center">
-                                    <div class="text-xl font-extrabold text-zinc-900">10h</div>
+                                    <div class="text-xl font-semibold text-zinc-900">10h</div>
                                     <div class="text-xs text-zinc-600">Saved /wk</div>
                                 </div>
                             </div>
@@ -875,7 +772,7 @@
                         <a href="/contact.html#hire"
                             class="inline-flex items-center gap-3 text-sm text-zinc-600 hover:text-indigo-600 transition"><i
                                 class="fa-solid fa-handshake-simple"></i>Hire Me</a>
-                        <a href="/resume/rahima-waheed-cv.pdf"
+                        <a href="/docs/assets/rahima-waheed-cv.pdf"
                             class="inline-flex items-center gap-3 text-sm text-zinc-600 hover:text-indigo-600 transition"><i
                                 class="fa-solid fa-file-arrow-down"></i>Download CV</a>
                     </div>
@@ -888,8 +785,60 @@
             </div>
         </div>
     </footer>
+
+
+
     <script>
         (function () { var y = document.getElementById('year'); if (y) { y.textContent = new Date().getFullYear(); } })();
+
+        (function () {
+            const chips = [...document.querySelectorAll('.stack-chip')];
+            chips.forEach(btn => btn.addEventListener('click', () => {
+                chips.forEach(b => b.classList.remove('bg-zinc-900', 'text-white'));
+                const q = btn.getAttribute('data-q') || '';
+                if (q) { btn.classList.add('bg-zinc-900', 'text-white'); }
+                document.dispatchEvent(new CustomEvent('project-search', { detail: { q } }));
+                if (!q) { document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: 'all' } })); }
+            }));
+        })();
+
+        (function () {
+            const chips = [...document.querySelectorAll('.filter-chip')];
+            chips.forEach(btn => btn.addEventListener('click', () => {
+                chips.forEach(b => b.classList.remove('active', 'bg-zinc-300', 'text-white'));
+                btn.classList.add('active', 'bg-zinc-300', 'text-white');
+                const f = btn.getAttribute('data-filter');
+                document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: f } }));
+            }));
+            const search = document.getElementById('project-search');
+            if (search) {
+                let t; search.addEventListener('input', () => {
+                    clearTimeout(t); t = setTimeout(() => {
+                        document.dispatchEvent(new CustomEvent('project-search', { detail: { q: search.value.trim() } }));
+                    }, 200);
+                });
+            }
+        })();
+
+
+        (function () {
+            const section = document.getElementById('projects-grid');
+            if (!section) return;
+            const cards = [...section.querySelectorAll('[data-project]')];
+            const empty = document.getElementById('no-results');
+            cards.forEach(c => { const title = c.querySelector('h3')?.textContent || ''; const desc = c.querySelector('.desc')?.textContent || ''; const tags = [...c.querySelectorAll('.tag')].map(t => t.textContent).join(' '); const meta = (c.getAttribute('data-tags') || '') + ' ' + (c.getAttribute('data-org') || '') + ' ' + (c.getAttribute('data-tech') || ''); c._search = (title + ' ' + desc + ' ' + tags + ' ' + meta).toLowerCase(); });
+            let active = 'all'; let q = '';
+            function apply() {
+                let shown = 0;
+                cards.forEach(c => { const tags = (c.getAttribute('data-tags') || '').split(',').map(s => s.trim()); const matchFilter = (active === 'all') || tags.includes(active); const matchSearch = (!q) || c._search.includes(q); const vis = matchFilter && matchSearch; c.classList.toggle('hidden', !vis); if (vis) shown++; });
+                if (empty) empty.classList.toggle('hidden', shown !== 0);
+            }
+            document.addEventListener('project-filter', e => { active = (e.detail && e.detail.filter) || 'all'; apply(); });
+            document.addEventListener('project-search', e => { q = ((e.detail && e.detail.q) || '').toLowerCase(); apply(); });
+            section.querySelectorAll('.tag[data-filter]').forEach(t => { t.addEventListener('click', () => { const f = t.getAttribute('data-filter'); document.dispatchEvent(new CustomEvent('project-filter', { detail: { filter: f } })); }); });
+            apply();
+        })();
+
     </script>
 
 

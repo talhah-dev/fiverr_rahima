@@ -66,7 +66,7 @@ footer.innerHTML = `
                         <a href="/contact.html#hire"
                             class="inline-flex items-center gap-3 text-sm text-zinc-600 hover:text-indigo-600 transition"><i
                                 class="fa-solid fa-handshake-simple"></i>Hire Me</a>
-                        <a href="/resume/rahima-waheed-cv.pdf"
+                        <a href="/docs/assets/rahima-waheed-cv.pdf"
                             class="inline-flex items-center gap-3 text-sm text-zinc-600 hover:text-indigo-600 transition"><i
                                 class="fa-solid fa-file-arrow-down"></i>Download CV</a>
                     </div>
